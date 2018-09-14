@@ -1,0 +1,37 @@
+dev b{
+  color: #FFFFFF;
+  text-align:center ;
+  font-size:300% ;
+  position: relative ;
+  left: 27.5% ;
+}
+
+img{
+  position: relative ;
+  text-align: center ;
+  left: 25% ;
+}
+
+#usernamestyle{
+  position: absolute ;
+  text-align: center ;
+  top: 2% ;
+  left: 76% ;
+  border-style: solid ;
+}
+#userpassword{
+  position: absolute ;
+  text-align: center ;
+  top: 8% ;
+  left: 81% ;
+  border-style: solid ;
+   
+}
+#submitpos{
+  position: absolute ;
+  text-align: right ;
+  top: 17% ;
+  left: 90% ;
+  width: 65px ;
+  letter-spacing: 7px ;
+}
