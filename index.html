@@ -13,15 +13,16 @@
   <script type="text/javascript">
     var i = 2 ;
     function imgchange(){
-      if(i==2){
-        i--;
-        img1.src="img/img"+i+".jpg";
+      if(i === 2){
+        i -- ;
+        img1.src = "img/img" + i + ".jpg" ;
       }
       else {
-        i++;
-        img1.src="img/img"+i+".jpg";
+        i ++ ;
+        img1.src = "img/img" + i + ".jpg" ;
       }
     }
+
   </script>
 
 </head>
@@ -43,9 +44,15 @@
 
 
   <br>
-  <img id="img1" src = "img/img2.jpg"  class="rounded mx-auto d-block" onclick="imgchange()" >
+  <img id="img1" src = "img/img2.jpg"  class="rounded mx-auto d-block" onclick="imgchange()"  >
   <br>
   <input id="pic1" type="button"  value="換圖" onclick="imgchange()">
+  <br>
+
+  <video  height="700px" width="900px" preload=""  controls controlsList="nodownload">
+    <source src="video/test.mp4" type="video/mp4">
+    你的瀏覽器不支援mp4檔案格式
+  </video>
 
 </body>
 </html>
