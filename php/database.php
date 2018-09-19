@@ -1,4 +1,14 @@
   <?php
+      require("../lib/libs/Smarty.class.php");
+      define ( 'APP_PATH' , '../'  );
+
+      $smarty = new Smarty() ;
+      $smarty ->template_dir = APP_PATH . "templates" ;
+      $smarty ->compile_dir = APP_PATH . "templates_c" ;
+      $smarty ->config_dir = APP_PATH . "configs" ;
+      $smarty ->cache_dir = APP_PATH . "cache" ;
+
+
       //帳號密碼變數 直接用post會有風險存在
       $account = $_POST['username'] ;
       $password = $_POST['password'] ;
@@ -17,19 +27,23 @@
       $sql2 = $mysqli->query($sql) ;
 
       //開頭文字
-      echo "<b>智慧監視器紀錄</b>"."<br>" ;
 
       //印出資料
-      $i=0;
-      while ($list[$i] = $sql2->fetch_object()) {
+      $i = 0 ;
+      while ($list = $sql2->fetch_object()) {
         // code...
-        echo $list[$i]->id . '.      ' ;
-        echo $list[$i]->date . "日" . $list[$i]->hour . "點" ;
-        echo $list[$i]->min . "分" . $list[$i]->sec . "秒   :  " ;
-        echo $list[$i]->who .'    ' ;
-        echo '<img id = "img"+i src="../img/cats.jpg" style="display:none" >' . '<input type="button" onclick="imgchange(img234)" value="圖片" >' . '<br>' ;
-        $i++;
+        $all_list[$i] = $list ;
+        $i++ ;
       }
+
+      $smarty ->assign( "sqldb" ,$all_list );
+
+      $smarty->assign("title", "測試用的網頁標題");
+      $smarty->assign("content", "測試用的網頁內容");
+      // 上面兩行也可以用這行代替
+      // $tpl->assign(array("title" => "測試用的網頁標題", "content" => "測試用的網頁內容"));
+      $smarty->display('../html/record.html');
+
       $sql2->close() ;
       $mysqli->close() ;
    ?>

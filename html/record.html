@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>智慧監視器</title>
+
+  <script type="text/javascript">
+    function showimg(that){
+        alert(that);
+        var divid=document.getElementById(that);
+        divid.style.display = 'block' ;
+
+
+    }
+  </script>
+
+</head>
+<body class="bg-info">
+  <h1 class="text-center font-weight-bold display-3" >
+    智慧監視器紀錄
+  </h1>
+
+  <!-- smarty section迴圈 取mysql資料-->
+  {section name = sqlid loop = $sqldb}
+    <li class="text-center">
+      {$sqldb[sqlid]->date}日
+      {$sqldb[sqlid]->hour}點
+      {$sqldb[sqlid]->min}分
+      {$sqldb[sqlid]->sec}秒:
+      {$sqldb[sqlid]->who}
+      <div   style="display:none">
+        <img src="../img/img.jpg" alt="" >
+      </div>
+
+        <img id="img1"  src="../img/img0.jpg" alt="" style="display:none" >
+        <input type="button"  value="開啟圖片" class="btn btn-info"  onClick="showimg('img1')" >
+    </li>
+  {/section}
+
+
+
+</body>
+</html>
