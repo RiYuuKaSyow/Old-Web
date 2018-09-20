@@ -13,7 +13,7 @@
       $account = $_POST['username'] ;
       $password = $_POST['password'] ;
       //連接mysql
-      $mysqli = new mysqli('localhost',$account,$password,'test1') ;
+      $mysqli = new mysqli('120.101.8.136',$account,$password,'test1') ;
 
       //連接是否失敗 true 錯誤訊息
       if($mysqli->connect_error){
@@ -22,24 +22,23 @@
 
       }
       //sql查詢語法
-      $sql = "select id,date,hour,min,sec,who from test" ;
+      $sql = "select month,day,hour,min,sec,member from test1" ;
       $mysqli->query('set names utf8') ;
       $sql2 = $mysqli->query($sql) ;
 
       //開頭文字
 
-      //印出資料
+      //取資料
       $i = 0 ;
-      while ($list = $sql2->fetch_object()) {
+      while ($list = $sql2->fetch_object() ) {
         // code...
         $all_list[$i] = $list ;
         $i++ ;
       }
 
       $smarty ->assign( "sqldb" ,$all_list );
-
-      $smarty->assign("title", "測試用的網頁標題");
-      $smarty->assign("content", "測試用的網頁內容");
+      $imgid = 1 ;
+      $smarty->assign("imgid",$imgid);
       // 上面兩行也可以用這行代替
       // $tpl->assign(array("title" => "測試用的網頁標題", "content" => "測試用的網頁內容"));
       $smarty->display('../html/record.html');

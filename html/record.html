@@ -14,7 +14,7 @@
     function showimg(that){
         alert(that);
         var divid=document.getElementById(that);
-        divid.style.display = 'block' ;
+        divid.style.display = 'none' ;
 
 
     }
@@ -29,17 +29,19 @@
   <!-- smarty section迴圈 取mysql資料-->
   {section name = sqlid loop = $sqldb}
     <li class="text-center">
-      {$sqldb[sqlid]->date}日
-      {$sqldb[sqlid]->hour}點
-      {$sqldb[sqlid]->min}分
-      {$sqldb[sqlid]->sec}秒:
-      {$sqldb[sqlid]->who}
-      <div   style="display:none">
-        <img src="../img/img.jpg" alt="" >
-      </div>
+        {$sqldb[sqlid]->month}月
+        {$sqldb[sqlid]->day}日
+        {$sqldb[sqlid]->hour}時
+        {$sqldb[sqlid]->min}分
+        {$sqldb[sqlid]->sec}秒:
+        {$sqldb[sqlid]->member}
 
-        <img id="img1"  src="../img/img0.jpg" alt="" style="display:none" >
-        <input type="button"  value="開啟圖片" class="btn btn-info"  onClick="showimg('img1')" >
+        <img id="'img'.$sqldb[sqlid]->id"  alt="" onclick="showimg(this)" class="rounded mx-auto d-block" src="../i/img1.jpg" width="60px" height="60px">
+
+        <!--
+        <input type="button"  value="開啟圖片" class="btn btn-info"  onClick="showimg('img'.$sqldb[sqlid]->id)" >
+        -->
+
     </li>
   {/section}
 
