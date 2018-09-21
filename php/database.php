@@ -13,8 +13,8 @@
       $account = $_POST['username'] ;
       $password = $_POST['password'] ;
       //連接mysql
-      $mysqli = new mysqli('120.101.8.136',$account,$password,'test1') ;
-
+      //$mysqli = new mysqli('120.101.8.136',$account,$password,'test1') ;
+      $mysqli = new mysqli('localhost',$account,$password,'test1') ;
       //連接是否失敗 true 錯誤訊息
       if($mysqli->connect_error){
 

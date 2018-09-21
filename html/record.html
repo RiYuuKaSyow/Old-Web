@@ -15,36 +15,62 @@
         alert(that);
         var divid=document.getElementById(that);
         divid.style.display = 'none' ;
-
-
     }
   </script>
 
 </head>
 <body class="bg-info">
-  <h1 class="text-center font-weight-bold display-3" >
-    智慧監視器紀錄
-  </h1>
+  <div class="">
+    <h1 class="text-center font-weight-bold display-3" >
+      智慧監視器紀錄
+    </h1>
+  </div>
+
+  <form class="" action="database.php" method="post">
+    <div class="text-center">
+      <input type="text" id="serchn" >
+      <input type="submit" value="搜尋">
+    </div>
+  </form>
 
   <!-- smarty section迴圈 取mysql資料-->
   {section name = sqlid loop = $sqldb}
-    <li class="text-center">
-        {$sqldb[sqlid]->month}月
-        {$sqldb[sqlid]->day}日
-        {$sqldb[sqlid]->hour}時
-        {$sqldb[sqlid]->min}分
-        {$sqldb[sqlid]->sec}秒:
-        {$sqldb[sqlid]->member}
-
-        <img id="'img'.$sqldb[sqlid]->id"  alt="" onclick="showimg(this)" class="rounded mx-auto d-block" src="../i/img1.jpg" width="60px" height="60px">
-
-        <!--
-        <input type="button"  value="開啟圖片" class="btn btn-info"  onClick="showimg('img'.$sqldb[sqlid]->id)" >
-        -->
-
-    </li>
+    <div class="text-center">
+      <li>
+          {$sqldb[sqlid]->month}月
+          {$sqldb[sqlid]->day}日
+          {$sqldb[sqlid]->hour}時
+          {$sqldb[sqlid]->min}分
+          {$sqldb[sqlid]->sec}秒:
+          {$sqldb[sqlid]->member}
+          {$smarty.section.sqlid.rownum}
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#imgid{$smarty.section.sqlid.rownum}">
+            圖片
+          </button>
+          <div class="modal fade" id="imgid{$smarty.section.sqlid.rownum}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="../i/img{$smarty.section.sqlid.rownum}.jpg" >
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </li>
+    </div>
   {/section}
 
+
+
+<!-- Modal-->
 
 
 </body>
