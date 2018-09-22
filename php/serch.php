@@ -44,19 +44,34 @@
 
       //取資料
       $i = 0 ;
+      $flag = 0 ;
       while ($list = $sql3->fetch_object() ) {
-          $all_list[$i] = $list ;
-          $i++ ;
+        if( $_POST['sermeb'] === '-1' or $list->member === $_POST['sermeb'] ){
+          if($_POST['sermon1'] === '-1' or ( (int)$list->month >= (int)$_POST['sermon1'] && (int)$list->month <=(int)$_POST['sermon2'] ) ){
+            if( $_POST['serday1']=== '-1' or ( (int)$list->day >= (int)$_POST['serday1'] && (int)$list->day <=(int)$_POST['serday2'] ) ){
+              if( $_POST['serh1']=== '-1' or ( (int)$list->hour >= (int)$_POST['serh1'] && (int)$list->hour <=(int)$_POST['serh2'] ) ){
+                $all_list[$i] = $list ;
+                $i++ ;
+                $flag = 1;
+              }
+            }
+          }
+        }
       }
       $i = 0 ;
       while ($list = $sql4->fetch_object() ) {
         $member_list[$i] = $list->member ;
         $i++ ;
       }
-
-
+      //成員assign
       $smarty ->assign( "sqlmeb" , $member_list);
-      $smarty ->assign( "sqldb" ,$all_list );
+      //資料assign
+      if($flag)
+        $smarty ->assign( "sqldb" ,$all_list );
+      else {
+      }
+
+
       $imgid = 1 ;
       $smarty->assign("imgid",$imgid);
       // 上面兩行也可以用這行代替
