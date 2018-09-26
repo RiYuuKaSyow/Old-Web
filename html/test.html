@@ -1,28 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>jQuery UI Dialog functionality</title>
-      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-      <!-- CSS -->
-
-      <!-- Javascript -->
-      <script>
-         $(function() {
-            $( "#dialog" ).dialog({
-               autoOpen: false,
-            });
-            $( "#opener" ).click(function() {
-               $( "#dialog" ).dialog( "open" );
-            });
-         });
-      </script>
-   </head>
-   <body>
-      <!-- HTML -->
-      <div id="dialog-1" title="Dialog Title goes here...">This my first jQuery UI Dialog!</div>
-      <button id="opener">Open Dialog</button>
-   </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>智慧監視器</title>
+</head>
+<body>
+  <div class="row">
+    <div class="container">
+      <div class="col">
+      </div>
+      <div class="col-md-10">
+        <div class="h1">
+          資料已經刪除
+        </div>
+        <form name="form1" action="../php/database.php" method="post">
+          <input type="submit" name="button" value="確定">
+        </form>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</body>
 </html>
