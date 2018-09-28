@@ -5,6 +5,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" ></script>
   <link rel="stylesheet" href="/css/video.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,36 +17,50 @@
   <!--[endif]-->
 
   <script type="text/javascript">
-
-    var i = 1 ;
-    function imgchange(){
-      if(i === 1){
-        i -- ;
-        img.src = "i/img" + i + ".jpg" ;
-      }
-      else {
-        i ++ ;
-        img.src = "i/img" + i + ".jpg" ;
-      }
-    }
+    //ajax練習
+    $( function() {
+      $("a").click(function(){
+        var link = $(this).attr("title") +".txt" ;
+        $("div#serch").load('HI.txt') ;
+        alert($(this)) ;
+      });
+    });
 
   </script>
 
 </head>
 <body class="bg-info">
 
+
   <div class="form">
-    <label class="text-center font-weight-bold display-3 col-sm-12">
-      智慧監視器
-    </label>
+    <div class=" row">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="text-center">
+            <span class=" align-text-top ">
+              <label class=" display-4 text-center font-weight-bold ">
+                智慧監視器
+                <button type="submit" class="btn btn-success rounded mx-auto d-block" data-toggle="modal" data-target="#login">
+                  登入
+                </button>
+              </label>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <a class=" btn btn-primary " title="HI" >搜尋</a>
+    <div class=" col-md-9" id="serch">
+      搜尋頁面
+    </div>
   </div>
 
 
-
     <!---登入按鈕-->
-    <button type="submit" class="btn btn-success rounded mx-auto d-block" data-toggle="modal" data-target="#login">
-      登入
-    </button>
+
   <!--按鈕觸發dialog 來登入-->
   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document" >
@@ -80,14 +95,8 @@
   <br>
   <img id="img" src = "i/img1.jpg"  class="rounded mx-auto d-block" onclick="imgchange()"  >
   <br>
-  <input id="pic1" type="button"  value="換圖" onclick="imgchange()">
-  <br>
 
-  <video id="vid1"height="480px" width="640px" preload="" controls controlsList="nodownload">
-    <source src="video/test.mp4" type="video/mp4">
 
-    你的瀏覽器不支援mp4檔案格式
-  </video>
 
 </body>
 </html>

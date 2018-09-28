@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-26 10:17:52
+/* Smarty version 3.1.32, created on 2018-09-28 19:25:19
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bab40b0554722_25195146',
+  'unifunc' => 'content_5bae63ffc3a653_76682055',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1537949869,
+      1 => 1538155518,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bab40b0554722_25195146 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bae63ffc3a653_76682055 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,11 +35,27 @@ function content_5bab40b0554722_25195146 (Smarty_Internal_Template $_smarty_tpl)
   <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"><?php echo '</script'; ?>
 >
+  <?php echo '<script'; ?>
+ src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" ><?php echo '</script'; ?>
+>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>智慧監視器</title>
+
+  <?php echo '<script'; ?>
+ type="text/javascript">
+    //ajax練習
+    $(function(){
+      $("a.btn").click(function(){
+        var link = "../php/" + $(this).attr("title") + ".php" ;
+        $("div#serch").load( link ) ;
+      });
+    });
+    
+  <?php echo '</script'; ?>
+>
 
 </head>
 <body class="bg-secondary">
@@ -51,7 +67,7 @@ function content_5bab40b0554722_25195146 (Smarty_Internal_Template $_smarty_tpl)
         智慧監視器紀錄
       </h1>
     <!--搜尋功能-->
-        <form class="" action="serch.php" method="post" name="f1">
+
           <select class="" name="sermeb" size="1">
             <option value="-1">成員</option>
             <?php
@@ -179,11 +195,13 @@ for ($__section_hour_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_h
 }
 ?>
           </select>
-            <input type="submit" name="serbtn" class="btn btn-primary" value="搜尋">
-          </form>
-
+          <a class=" btn btn-primary " title="serch" >搜尋</a>
+      </div>
     </div>
   <!--表格-->
+  <div class=" col-md-9" id="serch">
+    搜尋頁面
+  </div>
   <div class="container">
     <div class="row">
       <div class="col">
