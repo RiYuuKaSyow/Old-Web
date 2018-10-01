@@ -46,10 +46,10 @@
       $i = 0 ;
       $flag = 0 ;
       while ($list = $sql3->fetch_object() ) {
-        if( $_POST['sermeb'] === '-1' or $list->member === $_POST['sermeb'] ){
-          if($_POST['sermon1'] === '-1' or ( (int)$list->month >= (int)$_POST['sermon1'] && (int)$list->month <=(int)$_POST['sermon2'] ) ){
-            if( $_POST['serday1']=== '-1' or ( (int)$list->day >= (int)$_POST['serday1'] && (int)$list->day <=(int)$_POST['serday2'] ) ){
-              if( $_POST['serh1']=== '-1' or ( (int)$list->hour >= (int)$_POST['serh1'] && (int)$list->hour <=(int)$_POST['serh2'] ) ){
+        if( $_POST['sermeb'] === '-1' or $list->MEMBER === $_POST['sermeb'] ){
+          if($_POST['sermon1'] === '-1' or ( (int)$list->MONTH>= (int)$_POST['sermon1'] and (int)$list->MONTH <=(int)$_POST['sermon2'] ) ){
+            if( $_POST['serday1']=== '-1' or ( ((int)$list->MONTH < (int)$_POST['sermon2'] and (int)$list->DAY >= (int)$_POST['serday1']) or ((int)$list->MONTH === (int)$_POST['sermon2'] and (int)$list->DAY <= (int)$_POST['serday2']) ) ){
+              if( $_POST['serh1']=== '-1' or ( ((int)$list->DAY < (int)$_POST['serday2'] and (int)$list->DAY >= (int)$_POST['serh1']) or ((int)$list->MONTH === (int)$_POST['serday2'] and (int)$list->DAY <= (int)$_POST['serh2']) ) ){
                 $all_list[$i] = $list ;
                 $i++ ;
                 $flag = 1;

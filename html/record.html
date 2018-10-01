@@ -17,8 +17,13 @@
     //ajax練習
     $(function(){
       $("a.btn").click(function(){
+        for( var i = 0 ; i <)
+
+
+        /*
         var link = "../php/" + $(this).attr("title") + ".php" ;
-        $("div#serch").load( link ) ;
+        $("div#serch").load( link )
+        */
       });
     });
 
@@ -35,45 +40,45 @@
       </h1>
     <!--搜尋功能-->
 
-          <select class="" name="sermeb" size="1">
+          <select class="" id = "sermb" name="sermeb" size="1">
             <option value="-1">成員</option>
             {section name = member  loop = $sqlmeb }
               <option value="{$sqlmeb[member]}" size="1">{$sqlmeb[member]}</option>
             {/section}
           </select>
           從
-          <select class="" name="sermon1" size="1">
+          <select class="" name="sermon1" id = "sermon1" size="1">
             <option value="-1">月份</option>
             {section name = month  loop = $number start = 1  max = 12 }
               <option value="{$number[month]}">{$number[month]}月</option>
             {/section}
           </select>
-          <select class="" name="serday1" size="1">
+          <select class="" name="serday1" id = "serday1" size="1">
             <option value="-1">日期</option>
             {section name = day loop = $number start = 1  max = 31 }
                 <option value="{$number[day]}">{$number[day]}日</option>
             {/section}
           </select>
-          <select class="" name="serh1" size="1">
+          <select class="" name="serh1" id = "serh1" size="1">
             <option value="-1">小時</option>
             {section name = hour  loop = $number start = 0  max = 24 }
                 <option value="{$number[hour]}">{$number[hour]}時</option>
             {/section}
           </select>
           到
-          <select class="" name="sermon2" size="1">
+          <select class="" name="sermon2" id = "sermon2" size="1">
             <option value="-1">月份</option>
             {section name = month  loop = $number start = 1  max = 12 }
                 <option value="{$number[month]}">{$number[month]}月</option>
             {/section}
           </select>
-          <select class="" name="serday2" size="1">
+          <select class="" name="serday2" id = "serday2" size="1">
             <option value="-1">日期</option>
             {section name = day  loop = $number start = 1  max = 31 }
                 <option value="{$number[day]}">{$number[day]}日</option>
             {/section}
           </select>
-          <select class="" name="serh2" size="1">
+          <select class="" name="serh2" id = "serh2" size="1">
             <option value="-1">小時</option>
             {section name = hour  loop = $number start = 0  max = 24 }
               <option value="{$number[hour]}">{$number[hour]}時</option>
@@ -83,10 +88,7 @@
       </div>
     </div>
   <!--表格-->
-  <div class=" col-md-9" id="serch">
-    搜尋頁面
-  </div>
-  <div class="container">
+  <div class="container"  id="serch">
     <div class="row">
       <div class="col">
       </div>

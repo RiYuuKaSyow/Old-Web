@@ -25,7 +25,9 @@
         alert($(this)) ;
       });
     });
-
+    if ( {$idcheck} ) {
+      document.write( "HI " + " {$userid} " ) ;
+    };
   </script>
 
 </head>
@@ -36,25 +38,26 @@
     <div class=" row">
       <div class="container">
         <div class="col-md-12">
-          <div class="text-center">
-            <span class=" align-text-top ">
+          <span class=" align-text-top ">
+            <div class="text-center">
               <label class=" display-4 text-center font-weight-bold ">
                 智慧監視器
-                <button type="submit" class="btn btn-success rounded mx-auto d-block" data-toggle="modal" data-target="#login">
-                  登入
-                </button>
               </label>
+            </div>
+              <button id="btn" type="submit" class="btn btn-success rounded mx-auto d-block" data-toggle="modal" data-target="#login">
+                登入
+              </button>
+              <form name="form1" action="php/database.php" method="post">
+                <div class="d-block" id="rd.btn" >
+                  <button type="submit" class="btn btn-success rounded mx-auto d-block" >
+                    紀錄
+                  </button>
+                </div>
+              </form>
             </span>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="">
-    <a class=" btn btn-primary " title="HI" >搜尋</a>
-    <div class=" col-md-9" id="serch">
-      搜尋頁面
     </div>
   </div>
 
@@ -70,23 +73,23 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body text-center">
-          <form name="form1" action="php/database.php" method="post">
-              帳號:
-              <input type="text" name="username" value="">
-              <br>
-              密碼:
-              <input type="password" name="password" value="">
-        </div>
-        <div class="modal-footer">
-            <button type="submit" class="btn btn-success rounded mx-auto d-block">
+        <form class="" action="index.php" method="post">
+          <div class="modal-body text-center">
+            帳號:
+            <input type="text" name="username" value="">
+            <br>
+            密碼:
+            <input type="password" name="password" value="">
+          </div>
+          <div class="modal-footer">
+            <button id="dia-log-btn" type="submit" class="btn btn-success rounded mx-auto d-block">
               登入
             </button>
-          </form>
-          <button type="button" class="btn btn-danger " data-dismiss="modal" aria-label="Close">
+            <button type="button" class="btn btn-danger " data-dismiss="modal" aria-label="Close">
               取消
-          </button>
-        </div>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

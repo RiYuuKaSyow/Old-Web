@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-28 19:25:19
+/* Smarty version 3.1.32, created on 2018-10-01 16:44:07
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bae63ffc3a653_76682055',
+  'unifunc' => 'content_5bb232b7dd6c33_57474391',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1538155518,
+      1 => 1538405046,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bae63ffc3a653_76682055 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb232b7dd6c33_57474391 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,11 +49,16 @@ function content_5bae63ffc3a653_76682055 (Smarty_Internal_Template $_smarty_tpl)
     //ajax練習
     $(function(){
       $("a.btn").click(function(){
+        for( var i = 0 ; i <)
+
+
+        /*
         var link = "../php/" + $(this).attr("title") + ".php" ;
-        $("div#serch").load( link ) ;
+        $("div#serch").load( link )
+        */
       });
     });
-    
+
   <?php echo '</script'; ?>
 >
 
@@ -68,7 +73,7 @@ function content_5bae63ffc3a653_76682055 (Smarty_Internal_Template $_smarty_tpl)
       </h1>
     <!--搜尋功能-->
 
-          <select class="" name="sermeb" size="1">
+          <select class="" id = "sermb" name="sermeb" size="1">
             <option value="-1">成員</option>
             <?php
 $__section_member_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['sqlmeb']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -86,7 +91,7 @@ for ($__section_member_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section
 ?>
           </select>
           從
-          <select class="" name="sermon1" size="1">
+          <select class="" name="sermon1" id = "sermon1" size="1">
             <option value="-1">月份</option>
             <?php
 $__section_month_1_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['number']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -104,7 +109,7 @@ for ($__section_month_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_
 }
 ?>
           </select>
-          <select class="" name="serday1" size="1">
+          <select class="" name="serday1" id = "serday1" size="1">
             <option value="-1">日期</option>
             <?php
 $__section_day_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['number']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -122,7 +127,7 @@ for ($__section_day_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_da
 }
 ?>
           </select>
-          <select class="" name="serh1" size="1">
+          <select class="" name="serh1" id = "serh1" size="1">
             <option value="-1">小時</option>
             <?php
 $__section_hour_3_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['number']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -141,7 +146,7 @@ for ($__section_hour_3_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_h
 ?>
           </select>
           到
-          <select class="" name="sermon2" size="1">
+          <select class="" name="sermon2" id = "sermon2" size="1">
             <option value="-1">月份</option>
             <?php
 $__section_month_4_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['number']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -159,7 +164,7 @@ for ($__section_month_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_
 }
 ?>
           </select>
-          <select class="" name="serday2" size="1">
+          <select class="" name="serday2" id = "serday2" size="1">
             <option value="-1">日期</option>
             <?php
 $__section_day_5_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['number']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -177,7 +182,7 @@ for ($__section_day_5_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_da
 }
 ?>
           </select>
-          <select class="" name="serh2" size="1">
+          <select class="" name="serh2" id = "serh2" size="1">
             <option value="-1">小時</option>
             <?php
 $__section_hour_6_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['number']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -199,10 +204,7 @@ for ($__section_hour_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_h
       </div>
     </div>
   <!--表格-->
-  <div class=" col-md-9" id="serch">
-    搜尋頁面
-  </div>
-  <div class="container">
+  <div class="container"  id="serch">
     <div class="row">
       <div class="col">
       </div>
