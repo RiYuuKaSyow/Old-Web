@@ -12,7 +12,7 @@
 
   $idcheck = 0 ;
   if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
-    $mysqli = new mysqli('localhost','root','','test1') ;
+    $mysqli = new mysqli('120.101.8.116','root','','user') ;
     //連接是否失敗 true 錯誤訊息
     if($mysqli->connect_error){
 
@@ -21,22 +21,28 @@
     }
     //連線成功 檢查帳密
     else {
-      $sql = "select id,password from users" ;
+      $sql = "select user,pwd from data" ;
       $mysqli->query('set names utf8') ;
       $sql2 = $mysqli->query($sql) ;
       while ( $user = $sql2->fetch_object() ){
-        if ( $user->id === $_POST['username'] and $user->password === $_POST['password'] ) {
+        if ( $user->user === $_POST['username'] and $user->pwd === $_POST['password'] ) {
           //連線成功 建立session
-          $_SESSION['acc'] =  $user->id ;
-          $_SESSION['pwd'] =  $user->password ;
+          $_SESSION['acc'] =  $user->user ;
+          $_SESSION['pwd'] =  $user->pwd ;
           $idcheck = 1 ;
-          $smarty->assign( 'userid' , $user->id ) ;
+          $smarty->assign( 'userid' , $user->user ) ;
           break ;
         }
       }
     }
+    $usercheck = $idcheck ;
+  }
+  //登出
+  if( isset($_POST['dia-logout-btn'] ) ){
+    session_destroy();
   }
   $smarty->assign( 'idcheck' , $idcheck ) ;
+  $smarty->assign( 'usercheck' , $usercheck ) ;
 
-  $smarty->display( "index.html" ) ;
+  $smarty->display( "html/index.html" ) ;
 ?>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!----->
+<html lang="zh" style="background:gray">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" ></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/video.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>智慧型監視器</title>
+
+  <!---[if lt IE 9]-->
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <!--[endif]-->
+
+  <script type="text/javascript">
+    //ajax練習
+    $( function() {
+      $("a").click(function(){
+        var link = $(this).attr("title") +".txt" ;
+        $("div#serch").load('HI.txt') ;
+        alert($(this)) ;
+      });
+      //檢查登入 顯示按鈕
+      if ( {$idcheck} ) {
+        $("#re_btn").show();
+        $("#login_btn").hide();
+        $("#logout_btn").show();
+      };
+      //帳密錯誤
+      if( {$usercheck} ){
+        $("#logwrong").show();
+      }
+    });
+
+
+  </script>
+
+</head>
+<body class="bg-info">
+  <!---網頁開頭文字-->
+  <div class="sticky-wrapper" style=" height:100px; ">
+    <nav class=" navbar navbar-custom" role="=navigation">
+        <div class="container">
+          <div class="row header-wrapper">
+              <span class=" align-text-top ">
+                <div class="col-sm-12 col-xs-12">
+                    <div class=" text-center" >
+                      智慧監視器
+                    </div>
+                </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+  </div>
+
+  <!---登入 登出 紀錄 按鈕-->
+  <div class="container">
+    <div class="row">
+      <div id="logout_btn" class="col-sm-3 col-xs-3 col-md-3" style="display:none">
+        <button  type="submit" class="btn btn-info rounded mx-auto d-block" data-toggle="modal" data-target="#logout" >
+          登出
+        </button>
+      </div>
+      <div id="login_btn" class="col-sm-3 col-xs-3 col-md-3">
+        <button  type="submit" class="btn btn-info rounded mx-auto d-block" data-toggle="modal" data-target="#login">
+          登入
+        </button>
+      </div>
+      <form class="" action="../php/database.php" method="post">
+        <div id="re_btn" class="col-sm-3 col-xs-3 col-md-3" style="display:none" >
+          <button  type="submit" class="btn btn-info rounded mx-auto d-block" >
+            紀錄
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!--按鈕觸發dialog 來登入-->
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="" action="index.php" method="post">
+          <div class="modal-body text-center">
+            帳號:
+            <input type="text" name="username" value="">
+            <br>
+            密碼:
+            <input type="password" name="password" value="">
+          </div>
+          <div class="modal-footer">
+            <button id="dia-login-btn" type="submit" class="btn btn-success rounded mx-auto d-block">
+              登入
+            </button>
+            <button type="button" class="btn btn-danger " data-dismiss="modal" aria-label="Close">
+              取消
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!---登出提醒-->
+  <div class="modal" id="logout" role="dialog" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            確定要登出嗎?
+        </div>
+        <div class="modal-footer">
+          <form class="" action="../index.php" method="post">
+            <button type="submit" name="dia-logout-btn">
+              確定
+            </button>
+          </form>
+          <button type="button" name="button">
+            取消
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id ="logwrong" style="display:none">
+    <div class="modal"  role="dialog" >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" aria-label="Close">
+            </button>
+          </div>
+          <div class="modal-body text-center">
+              帳號或密碼輸入錯誤
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <img id="img" src = "i/img1.jpg"  class="rounded mx-auto d-block" onclick="imgchange()"  >
+  <br>
+</body>
+</html>

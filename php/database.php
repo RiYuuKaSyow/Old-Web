@@ -21,8 +21,9 @@
 
 
       //連接mysql
-      //$mysqli = new mysqli('120.101.8.109' , 'test1' , '' ,'test1') ;
-      $mysqli = new mysqli('localhost','root','','test1') ;
+      $mysqliuser = new mysqli('120.101.8.116' , 'root' , '' ,'user') ;
+      $mysqli = new mysqli('120.101.8.116' , 'root' , '' ,'record') ;
+      //$mysqli = new mysqli('localhost','root','','test1') ;
       //連接是否失敗 true 錯誤訊息
       if($mysqli->connect_error){
 
@@ -37,7 +38,7 @@
       }
       */
       //sql查詢語法
-      $sql1 = "select MONTH,DAY,HOUR,MINS,SEC,MEMBER from test2" ;
+      $sql1 = "select month,day,hour,min,sec,member from test1" ;
       $sql2 = "select member from member" ;
       $mysqli->query('set names utf8') ;
 
@@ -46,7 +47,7 @@
 
       //確認登入
       $idcheck = 0 ;
-      $sqll = "select id,password from users" ;
+      $sqll = "select user,pwd from data" ;
       $mysqli->query('set names utf8') ;
       $sqllog = $mysqli->query($sqll) ;
       while ( $user = $sqllog->fetch_object() ){
