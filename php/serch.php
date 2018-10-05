@@ -13,18 +13,11 @@
         $number[$j] = $j;
       }
       $smarty->assign( "number" ,$number );
-      //帳號密碼變數 直接用post會有風險存在
-      if( ! ( isset( $_SESSION['acc'] ) && isset( $_SESSION['pwd'] ) ) ){
-        $account = $_POST['username'] ;
-        $password = $_POST['password'] ;
-        //session
-        $_SESSION['acc'] = $account ;
-        $_SESSION['pwd'] = $password ;
-      }
+
 
       //連接mysql
-      //$mysqli = new mysqli('120.101.8.136',$account,$password,'test1') ;
-      $mysqli = new mysqli('localhost',  $_SESSION['acc'] , $_SESSION['pwd'] ,'test1') ;
+      $mysqli = new mysqli('120.101.8.140','root','','test1') ;
+      //$mysqli = new mysqli('localhost',  $_SESSION['acc'] , $_SESSION['pwd'] ,'test1') ;
       //連接是否失敗 true 錯誤訊息
       if($mysqli->connect_error){
 
@@ -32,7 +25,7 @@
 
       }
       //sql查詢語法
-      $sql1 = "select MONTH,DAY,HOUR,MINS,SEC,MEMBER from test2" ;
+      $sql1 = "select month,day,hour,min,sec,member from video1" ;
       $sql2 = "select member from member" ;
       $mysqli->query('set names utf8') ;
 

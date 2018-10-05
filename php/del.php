@@ -31,13 +31,13 @@
     }
 
     //sql查詢語法
-    $sql1 = "select ID,MONTH,DAY,HOUR,MINS,SEC,MEMBER from test2" ;
+    $sql1 = "select id,month,day,hour,min,sec,member from test2" ;
     $mysqli->query('set names utf8') ;
 
     $sql2 = $mysqli->query($sql1) ;
 
     //刪除語法
-    $sqldel = "delete from test2 where ID =";
+    $sqldel = "delete from test2 where id =";
 
     //刪資料
     $i = 0 ;
@@ -45,7 +45,7 @@
       while ($list = $sql2->fetch_object() ) {
         $i++ ;
         if ( isset($_POST['id'.$i])  ) {
-          $sqlde = $mysqli->query( $sqldel . $list->ID  ) ;
+          $sqlde = $mysqli->query( $sqldel . $list->id  ) ;
         }
       }
     }

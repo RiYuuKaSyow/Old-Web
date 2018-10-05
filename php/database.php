@@ -32,7 +32,7 @@
       }
 
       //sql查詢語法
-      $sql1 = "select month,day,hour,min,sec,member from video1" ;
+      $sql1 = "select month,day,hour,min,sec,member,img from video1" ;
     //  $sql2 = "select member from member" ;
       $mysqli->query('set names utf8') ;
 

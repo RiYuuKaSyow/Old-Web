@@ -31,6 +31,7 @@
         $("#re_btn").show();
         $("#login_btn").hide();
         $("#logout_btn").show();
+        $("#signup_btn").hide();
       };
       //帳密錯誤
       if( {$usercheck} ){
@@ -70,6 +71,11 @@
           登出
         </button>
       </div>
+      <div id="signup_btn" class="col-sm-3 col-xs-3 col-md-3" >
+        <button  type="submit" class="btn btn-info rounded mx-auto d-block" data-toggle="modal" data-target="#signup" >
+          註冊
+        </button>
+      </div>
       <div id="login_btn" class="col-sm-3 col-xs-3 col-md-3">
         <button  type="submit" class="btn btn-info rounded mx-auto d-block" data-toggle="modal" data-target="#login">
           登入
@@ -90,17 +96,23 @@
     <div class="modal-dialog" role="document" >
       <div class="modal-content">
         <div class="modal-header">
+          <div class="text-center">
+            登入
+          </div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <form class="" action="index.php" method="post">
           <div class="modal-body text-center">
-            帳號:
-            <input type="text" name="username" value="">
-            <br>
-            密碼:
-            <input type="password" name="password" value="">
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" name="sign_user" placeholder="帳號">
+              <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" name="sign_pwd" placeholder="密碼">
+              <span class="help-block"></span>
+            </div>
           </div>
           <div class="modal-footer">
             <button id="dia-login-btn" type="submit" class="btn btn-success rounded mx-auto d-block">
@@ -135,6 +147,49 @@
             取消
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+  <!--註冊-->
+  <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="">
+            註冊
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form class="" action="signup.php" method="post">
+          <div class="modal-body text-center">
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" name="sign_user" placeholder="帳號">
+              <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" name="sign_pwd" placeholder="密碼">
+              <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-12">
+              <input type="password" class="form-control" placeholder="再次輸入密碼">
+              <span class="help-block"></span>
+            </div>
+            <div class="form-group col-md-12">
+              <input type="email" class="form-control" name="sign_email" placeholder="電子信箱">
+              <span class="help-block"></span>
+            </div>
+          </div>
+          <div class="modal-footer">
+              <button  type="submit" class="btn btn-success rounded mx-auto d-block">
+                註冊
+              </button>
+            <button type="button" class="btn btn-danger " data-dismiss="modal" aria-label="Close">
+              取消
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

@@ -143,7 +143,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <img src="../i/img{$smarty.section.sqlid.rownum}.jpg" width="400px" height="200px">
+                        <img src="{$sqldb[sqlid]->img}" width="400px" height="200px">
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -151,6 +151,7 @@
                     </div>
                   </div>
                 </div>
+                <!--開啟dialog顯示影片-->
                 <div class="modal fade" id="vidid{$smarty.section.sqlid.rownum}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document" >
                     <div class="modal-content">
