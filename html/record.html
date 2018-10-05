@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!----->
 <html lang="en">
 <head>
   <link rel="stylesheet" href="../css/gradient.css">
@@ -39,13 +40,15 @@
         智慧監視器紀錄
       </h1>
     <!--搜尋功能-->
-
+    <!--
           <select class="" id = "sermb" name="sermeb" size="1">
             <option value="-1">成員</option>
             {section name = member  loop = $sqlmeb }
               <option value="{$sqlmeb[member]}" size="1">{$sqlmeb[member]}</option>
             {/section}
           </select>
+    -->
+          <form class="" action="database.php" method="post">
           從
           <select class="" name="sermon1" id = "sermon1" size="1">
             <option value="-1">月份</option>
@@ -84,7 +87,8 @@
               <option value="{$number[hour]}">{$number[hour]}時</option>
             {/section}
           </select>
-          <a class=" btn btn-primary " title="serch" >搜尋</a>
+            <button type="submit" name="button">搜尋</button>
+          </form>
       </div>
     </div>
   <!--表格-->
@@ -112,12 +116,12 @@
             {section name = sqlid loop = $sqldb}
               <tr>
                 <td><input type="checkbox" name="id{$smarty.section.sqlid.rownum}" style="zoom:3">
-                <td> {$sqldb[sqlid]->MONTH}</td>
-                <td>{$sqldb[sqlid]->DAY}</td>
-                <td>{$sqldb[sqlid]->HOUR}</td>
-                <td>{$sqldb[sqlid]->MINS}</td>
-                <td>{$sqldb[sqlid]->SEC}</td>
-                <td>{$sqldb[sqlid]->MEMBER}</td>
+                <td> {$sqldb[sqlid]->month}</td>
+                <td>{$sqldb[sqlid]->day}</td>
+                <td>{$sqldb[sqlid]->hour}</td>
+                <td>{$sqldb[sqlid]->min}</td>
+                <td>{$sqldb[sqlid]->sec}</td>
+                <td>{$sqldb[sqlid]->member}</td>
                 <td>
                   <!--開啟圖片按鈕-->
                   <button type="button" class="btn btn-secondary text-dark" data-toggle="modal" data-target="#imgid{$smarty.section.sqlid.rownum}">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-01 16:44:07
+/* Smarty version 3.1.32, created on 2018-10-05 06:32:09
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bb232b7dd6c33_57474391',
+  'unifunc' => 'content_5bb6e949b10457_54814867',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1538405046,
+      1 => 1538713925,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bb232b7dd6c33_57474391 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb6e949b10457_54814867 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
+<!----->
 <html lang="en">
 <head>
   <link rel="stylesheet" href="../css/gradient.css">
@@ -72,7 +73,7 @@ function content_5bb232b7dd6c33_57474391 (Smarty_Internal_Template $_smarty_tpl)
         智慧監視器紀錄
       </h1>
     <!--搜尋功能-->
-
+    <!--
           <select class="" id = "sermb" name="sermeb" size="1">
             <option value="-1">成員</option>
             <?php
@@ -90,6 +91,8 @@ for ($__section_member_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section
 }
 ?>
           </select>
+    -->
+          <form class="" action="database.php" method="post">
           從
           <select class="" name="sermon1" id = "sermon1" size="1">
             <option value="-1">月份</option>
@@ -200,7 +203,8 @@ for ($__section_hour_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_h
 }
 ?>
           </select>
-          <a class=" btn btn-primary " title="serch" >搜尋</a>
+            <a class=" btn btn-primary " title="serch" >搜尋</a>
+          </form>
       </div>
     </div>
   <!--表格-->
@@ -236,17 +240,17 @@ $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] = $__section_s
               <tr>
                 <td><input type="checkbox" name="id<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] : null);?>
 " style="zoom:3">
-                <td> <?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->MONTH;?>
+                <td> <?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->month;?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->DAY;?>
+                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->day;?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->HOUR;?>
+                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->hour;?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->MINS;?>
+                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->min;?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->SEC;?>
+                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->sec;?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->MEMBER;?>
+                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->member;?>
 </td>
                 <td>
                   <!--開啟圖片按鈕-->

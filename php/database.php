@@ -21,8 +21,8 @@
 
 
       //連接mysql
-      $mysqliuser = new mysqli('120.101.8.116' , 'root' , '' ,'user') ;
-      $mysqli = new mysqli('120.101.8.116' , 'root' , '' ,'record') ;
+      $mysqliuser = new mysqli('120.101.8.140' , 'root' , '' ,'user') ;
+      $mysqli = new mysqli('120.101.8.140' , 'root' , '' ,'record') ;
       //$mysqli = new mysqli('localhost','root','','test1') ;
       //連接是否失敗 true 錯誤訊息
       if($mysqli->connect_error){
@@ -30,28 +30,22 @@
         die('登入失敗 <br> 連結錯誤訊息:'.$mysqli->connect_error."<br>") ;
 
       }
-      /*
-      else {
-        //連線成功 建立session
-        $_SESSION['acc'] = $account ;
-        $_SESSION['pwd'] = $password ;
-      }
-      */
+
       //sql查詢語法
-      $sql1 = "select month,day,hour,min,sec,member from test1" ;
-      $sql2 = "select member from member" ;
+      $sql1 = "select month,day,hour,min,sec,member from video1" ;
+    //  $sql2 = "select member from member" ;
       $mysqli->query('set names utf8') ;
 
       $sql3 = $mysqli->query($sql1) ;
-      $sql4 = $mysqli->query($sql2) ;
+      //$sql4 = $mysqli->query($sql2) ;
 
       //確認登入
       $idcheck = 0 ;
       $sqll = "select user,pwd from data" ;
       $mysqli->query('set names utf8') ;
-      $sqllog = $mysqli->query($sqll) ;
+      $sqllog = $mysqliuser->query($sqll) ;
       while ( $user = $sqllog->fetch_object() ){
-        if ( $user->id === $_SESSION['acc'] and $user->password === $_SESSION['pwd'] ) {
+        if ( $user->user === $_SESSION['acc'] and $user->pwd === $_SESSION['pwd'] ) {
           $idcheck = 1 ;
           break ;
         }
@@ -64,12 +58,13 @@
             $i++ ;
         }
         $i = 0 ;
-
+        /*
         while ($list = $sql4->fetch_object() ) {
           $member_list[$i] = $list->member ;
           $i++ ;
         }
         $smarty ->assign( "sqlmeb" , $member_list);
+        */
         $smarty ->assign( "sqldb" ,$all_list );
       }
 

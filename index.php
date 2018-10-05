@@ -11,8 +11,9 @@
 
 
   $idcheck = 0 ;
+  $usercheck = $idcheck ;
   if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
-    $mysqli = new mysqli('120.101.8.116','root','','user') ;
+    $mysqli = new mysqli('120.101.8.140','root','','user') ;
     //連接是否失敗 true 錯誤訊息
     if($mysqli->connect_error){
 
