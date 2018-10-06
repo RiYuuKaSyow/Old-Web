@@ -1,0 +1,15 @@
+html{
+  height: 100% ;
+}
+body{
+  min-height: 100% ;
+}
+.bg_black{
+  background-color: #000000 ;
+}
+.bg_purple{
+  background-color: #A35EC4 ;
+}
+.te_white{
+  color: #FFFFFF;
+}

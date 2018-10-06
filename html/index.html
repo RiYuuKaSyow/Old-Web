@@ -8,7 +8,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" ></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="/css/video.css">
+  <link rel="stylesheet" href="fixed_color.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -43,53 +43,42 @@
   </script>
 
 </head>
-<body class="bg-info">
-  <!---網頁開頭文字-->
-  <div class="sticky-wrapper" style=" height:100px; ">
-    <nav class=" navbar navbar-custom" role="=navigation">
-        <div class="container">
-          <div class="row header-wrapper">
-              <span class=" align-text-top ">
-                <div class="col-sm-12 col-xs-12">
-                    <div class=" text-center" >
-                      智慧監視器
-                    </div>
-                </div>
-                </span>
-              </div>
-            </div>
-          </div>
+<body class="bg-dark" >
+  <!---網頁border-->
+  <div class="rounded">
+    <div class="container" style="height:60px">
+      <div class="row bg_purple " style="height:50px" >
+        <div class="col-sm-10 col-xs-10  text-light  h3">
+          智慧監視器
         </div>
-    </nav>
-  </div>
-
-  <!---登入 登出 紀錄 按鈕-->
-  <div class="container">
-    <div class="row">
-      <div id="logout_btn" class="col-sm-3 col-xs-3 col-md-3" style="display:none">
-        <button  type="submit" class="btn btn-info rounded mx-auto d-block" data-toggle="modal" data-target="#logout" >
-          登出
-        </button>
-      </div>
-      <div id="signup_btn" class="col-sm-3 col-xs-3 col-md-3" >
-        <button  type="submit" class="btn btn-info rounded mx-auto d-block" data-toggle="modal" data-target="#signup" >
-          註冊
-        </button>
-      </div>
-      <div id="login_btn" class="col-sm-3 col-xs-3 col-md-3">
-        <button  type="submit" class="btn btn-info rounded mx-auto d-block" data-toggle="modal" data-target="#login">
-          登入
-        </button>
-      </div>
-      <form class="" action="../php/database.php" method="post">
-        <div id="re_btn" class="col-sm-3 col-xs-3 col-md-3" style="display:none" >
-          <button  type="submit" class="btn btn-info rounded mx-auto d-block" >
-            紀錄
+        <!---登入 登出 紀錄 按鈕-->
+        <div id="login_btn" class="col-sm-1.col-xs-1 "  >
+          <button  type="submit" class="btn bg_purple te_white" data-toggle="modal" data-target="#login">
+            登入
           </button>
         </div>
-      </form>
+        <div id="signup_btn" class=" col-sm-1 col-xs-1 " >
+          <button  type="submit" class="btn bg_purple te_white rounded mx-auto d-block" data-toggle="modal" data-target="#signup" >
+            註冊
+          </button>
+        </div>
+        <form class="" action="../php/database.php" method="post">
+        <div id="re_btn" class="col-sm-1 col-xs-1 float-right" style="display:none" >
+          <button  type="submit" class="btn bg_purple te_white rounded mx-auto d-block" >
+              紀錄
+          </button>
+        </div>
+        </form>
+        <div id="logout_btn" class=" col-sm-1 col-xs-1 float-right" style="display:none">
+          <button  type="submit" class="btn bg_purple te_white rounded mx-auto d-block" data-toggle="modal" data-target="#logout" >
+            登出
+          </button>
+        </div>
+      </div>
     </div>
   </div>
+
+
 
   <!--按鈕觸發dialog 來登入-->
   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -103,14 +92,14 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form class="" action="index.php" method="post">
+        <form class="" action="../index.php" method="post">
           <div class="modal-body text-center">
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" name="sign_user" placeholder="帳號">
+              <input type="text" class="form-control" name="user" placeholder="帳號">
               <span class="help-block"></span>
             </div>
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" name="sign_pwd" placeholder="密碼">
+              <input type="password" class="form-control" name="pwd" placeholder="密碼">
               <span class="help-block"></span>
             </div>
           </div>
@@ -193,6 +182,7 @@
       </div>
     </div>
   </div>
+  <!--帳密輸入錯誤-->
   <div id ="logwrong" style="display:none">
     <div class="modal"  role="dialog" >
       <div class="modal-dialog" role="document">
@@ -210,10 +200,14 @@
       </div>
     </div>
   </div>
+  <!--首頁標題--->
+  <div class="text-center col-xs-12 col-sm-12 te_white h2 " style="height:55px">
+    首  頁
+  </div>
+  <!--首頁內容--->
+  <div>
+    <img id="img" src = "i/123.png"  class="rounded mx-auto d-block" onclick="imgchange()"  >
+  </div>
 
-
-  <br>
-  <img id="img" src = "i/img1.jpg"  class="rounded mx-auto d-block" onclick="imgchange()"  >
-  <br>
 </body>
 </html>

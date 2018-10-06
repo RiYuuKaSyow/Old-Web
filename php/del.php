@@ -10,8 +10,10 @@
     $smarty ->cache_dir = APP_PATH . "cache" ;
 
     //連接mysql
-    //$mysqli = new mysqli('120.101.8.136',$account,$password,'test1') ;
-    $mysqli = new mysqli('localhost',  'root' , '' ,'test1') ;
+    //$mysqliuser = new mysqli('120.101.8.38' , 'root' , '' ,'user') ;
+    //$mysqli = new mysqli('120.101.8.140' , 'root' , '' ,'record') ;
+    $mysqli = new mysqli('localhost' , 'root' , '' ,'record') ;
+    $mysqli = new mysqli('localhost','root','','user') ;
     //連接是否失敗 true 錯誤訊息
     if($mysqli->connect_error){
 

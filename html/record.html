@@ -17,14 +17,6 @@
   <script type="text/javascript">
     //ajax練習
     $(function(){
-      $("a.btn").click(function(){
-        for( var i = 0 ; i <)
-
-
-        /*
-        var link = "../php/" + $(this).attr("title") + ".php" ;
-        $("div#serch").load( link )
-        */
       });
     });
 
@@ -32,13 +24,60 @@
 
 </head>
 <body class="bg-secondary">
+  <!---網頁border-->
+  <div class="">
 
-  <!--網頁開頭標題-->
+  </div>
+  <div class="container" style="height:60px" >
+    <div class="row bg_purple" style="height:50px" >
+      <div class="col-sm-10 col-xs-10  text-light  h3">
+        智慧監視器
+      </div>
+      <!---登入 登出 紀錄 按鈕-->
+      <form class="" action="../index.php" method="post">
+      <div id="index_btn" class="col-sm-1 col-xs-1 "  >
+        <button  type="submit" class="btn bg_purple te_white rounded mx-auto d-block" >
+          首頁
+        </button>
+      </div>
+      </form>
+      <div id="logout_btn" class=" col-sm-1 col-xs-1 " >
+        <button  type="submit" class="btn bg_purple te_white rounded mx-auto d-block" data-toggle="modal" data-target="#logout" >
+          登出
+        </button>
+      </div>
+    </div>
+  </div>
+  <!---登出提醒-->
+  <div class="modal" id="logout" role="dialog" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            確定要登出嗎?
+        </div>
+        <div class="modal-footer">
+          <form class="" action="../index.php" method="post">
+            <button type="submit" name="dia-logout-btn">
+              確定
+            </button>
+          </form>
+          <button type="button" name="button">
+            取消
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--紀錄頁標題-->
   <div class="text-center text-light">
     <div class="bg-primary">
-      <h1 class="font-weight-bold display-3" >
-        智慧監視器紀錄
-      </h1>
+      <div class="text-center col-xs-12 col-sm-12 te_white h2 " style="height:55px">
+        紀錄
+      </div>
     <!--搜尋功能-->
     <!--
           <select class="" id = "sermb" name="sermeb" size="1">
@@ -91,7 +130,7 @@
           </form>
       </div>
     </div>
-  <!--表格-->
+  <!--紀錄頁內容表格-->
   <div class="container"  id="serch">
     <div class="row">
       <div class="col">
@@ -179,7 +218,6 @@
       </div>
     </div>
   </div>
-
 
 </body>
 </html>

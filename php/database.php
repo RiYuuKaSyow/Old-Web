@@ -21,9 +21,10 @@
 
 
       //連接mysql
-      $mysqliuser = new mysqli('120.101.8.140' , 'root' , '' ,'user') ;
-      $mysqli = new mysqli('120.101.8.140' , 'root' , '' ,'record') ;
-      //$mysqli = new mysqli('localhost','root','','test1') ;
+      //$mysqliuser = new mysqli('120.101.8.38' , 'root' , '' ,'user') ;
+      //$mysqli = new mysqli('120.101.8.140' , 'root' , '' ,'record') ;
+      $mysqli = new mysqli('localhost' , 'root' , '' ,'record') ;
+      $mysqli = new mysqli('localhost','root','','user') ;
       //連接是否失敗 true 錯誤訊息
       if($mysqli->connect_error){
 
@@ -75,6 +76,7 @@
       $smarty->display('../html/record.html');
 
       $sql3->close() ;
+      //
       $sql4->close() ;
       $mysqli->close() ;
 

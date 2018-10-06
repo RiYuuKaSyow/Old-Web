@@ -12,8 +12,8 @@
 
   $idcheck = 0 ;
   $usercheck = $idcheck ;
-  if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
-    $mysqli = new mysqli('120.101.8.140','root','','user') ;
+  if ( isset( $_POST['user'] ) && isset( $_POST['pwd'] ) ) {
+    $mysqli = new mysqli('120.101.8.38','root','','user') ;
     //連接是否失敗 true 錯誤訊息
     if($mysqli->connect_error){
 
@@ -26,7 +26,7 @@
       $mysqli->query('set names utf8') ;
       $sql2 = $mysqli->query($sql) ;
       while ( $user = $sql2->fetch_object() ){
-        if ( $user->user === $_POST['username'] and $user->pwd === $_POST['password'] ) {
+        if ( $user->user === $_POST['user'] and $user->pwd === $_POST['pwd'] ) {
           //連線成功 建立session
           $_SESSION['acc'] =  $user->user ;
           $_SESSION['pwd'] =  $user->pwd ;
