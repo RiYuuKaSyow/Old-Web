@@ -1,9 +1,9 @@
 <?php
   //連接mysql
-  //$mysqliuser = new mysqli('120.101.8.38' , 'root' , '' ,'user') ;
-  //$mysqli = new mysqli('120.101.8.140' , 'root' , '' ,'record') ;
-  $mysqli = new mysqli('localhost' , 'root' , '' ,'record') ;
-  $mysqli = new mysqli('localhost','root','','user') ;
+  $mysqliuser = new mysqli('120.101.8.86' , 'root' , '' ,'user') ;
+  $mysqli = new mysqli('120.101.8.86' , 'root' , '' ,'record') ;
+//  $mysqli = new mysqli('localhost' , 'root' , '' ,'record') ;
+//  $mysqli = new mysqli('localhost','root','','user') ;
   //查詢帳號信箱
   $sqlsel = "select user,mail from data" ;
   //新增帳號

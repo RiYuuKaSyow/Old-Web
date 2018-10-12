@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-05 06:32:09
+/* Smarty version 3.1.32, created on 2018-10-12 09:24:26
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bb6e949b10457_54814867',
+  'unifunc' => 'content_5bc04c2aa25207_77189499',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1538713925,
+      1 => 1539329064,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bb6e949b10457_54814867 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc04c2aa25207_77189499 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="../css/gradient.css">
+  <link rel="stylesheet" href="../css/fixcolor.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
@@ -49,14 +49,6 @@ function content_5bb6e949b10457_54814867 (Smarty_Internal_Template $_smarty_tpl)
  type="text/javascript">
     //ajax練習
     $(function(){
-      $("a.btn").click(function(){
-        for( var i = 0 ; i <)
-
-
-        /*
-        var link = "../php/" + $(this).attr("title") + ".php" ;
-        $("div#serch").load( link )
-        */
       });
     });
 
@@ -64,14 +56,37 @@ function content_5bb6e949b10457_54814867 (Smarty_Internal_Template $_smarty_tpl)
 >
 
 </head>
-<body class="bg-secondary">
+<body>
+  <!---網頁border-->
+  <div class="">
 
-  <!--網頁開頭標題-->
+  </div>
+  <div class="container" style="height:60px" >
+    <div class="row bg_purple" style="height:50px" >
+      <div class="col-sm-8 col-xs-8  text-light  h3">
+        智慧監視器
+      </div>
+      <!---登入 登出 紀錄 按鈕-->
+      <form class="" action="../index.php" method="post">
+      <div id="index_btn" class="col-sm-1 col-xs-1 "  >
+        <button  type="submit" class="btn bg_purple te_white rounded mx-auto d-block" >
+          首頁
+        </button>
+      </div>
+      </form>
+      <div id="logout_btn" class=" col-sm-1 col-xs-1 " >
+        <button  type="submit" class="btn bg_purple te_white rounded mx-auto d-block" data-toggle="modal" data-target="#logout" >
+          登出
+        </button>
+    </div>
+    </div>
+  </div>
+  <!--紀錄頁標題-->
   <div class="text-center text-light">
     <div class="bg-primary">
-      <h1 class="font-weight-bold display-3" >
-        智慧監視器紀錄
-      </h1>
+      <div class="text-center col-xs-12 col-sm-12 te_white h2 " style="height:55px">
+        紀錄
+      </div>
     <!--搜尋功能-->
     <!--
           <select class="" id = "sermb" name="sermeb" size="1">
@@ -203,29 +218,25 @@ for ($__section_hour_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_h
 }
 ?>
           </select>
-            <a class=" btn btn-primary " title="serch" >搜尋</a>
+            <button type="submit" class="btn bg-primary te_white" name="button">搜尋</button>
           </form>
       </div>
     </div>
-  <!--表格-->
+  <!--紀錄頁內容表格-->
   <div class="container"  id="serch">
     <div class="row">
       <div class="col">
       </div>
       <div class="col-md-9">
         <table class="table table-striped table-border table-hover table-sm ">
-          <thead class="thead-dark">
-            <th scope="col">
+          <thead class="thead-dark text-center">
+            <th >
               <form class="" action="del.php" method="post">
                 <input type="submit"  class="btn btn-dark" value="刪除">
             </th>
-            <th scope="col-xs-2">月份</th>
-            <th scope="col">日期</th>
-            <th scope="col">小時</th>
-            <th scope="col">分鐘</th>
-            <th scope="col">秒</th>
-            <th scope="col">成員</th>
-            <th scope="col"></th>
+            <th >時間</th>
+            <th >成員</th>
+            <th ></th>
           </thead>
           <tbody>
             <!-- smarty section迴圈 取mysql資料-->
@@ -238,19 +249,19 @@ for ($__section_sqlid_7_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_
 $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] = $__section_sqlid_7_iteration;
 ?>
               <tr>
-                <td><input type="checkbox" name="id<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] : null);?>
+                <td class="text-center"><input type="checkbox" name="id<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] : null);?>
 " style="zoom:3">
-                <td> <?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->month;?>
-</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->day;?>
-</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->hour;?>
-</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->min;?>
-</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->sec;?>
-</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->member;?>
+                <td class="text-center"> <?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->month;?>
+月
+                <?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->day;?>
+日
+                <?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->hour;?>
+點
+                <?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->min;?>
+分
+                <?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->sec;?>
+秒</td>
+                <td class="text-center"><?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->member;?>
 </td>
                 <td>
                   <!--開啟圖片按鈕-->
@@ -276,8 +287,9 @@ $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] = $__section_s
                         </button>
                       </div>
                       <div class="modal-body">
-                        <img src="../i/img<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] : null);?>
-.jpg" width="400px" height="200px">
+                        <!--<?php echo $_smarty_tpl->tpl_vars['sqldb']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['index'] : null)]->img;?>
+--->
+                        <img src="../../../i/img1.jpg" width="400px" height="200px">
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -285,6 +297,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] = $__section_s
                     </div>
                   </div>
                 </div>
+                <!--開啟dialog顯示影片-->
                 <div class="modal fade" id="vidid<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum']) ? $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] : null);?>
 " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document" >
@@ -316,8 +329,30 @@ $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] = $__section_s
       </div>
     </div>
   </div>
-
-
+  <!---登出提醒-->
+  <div class="modal" id="logout" role="dialog" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            確定要登出嗎?
+        </div>
+        <div class="modal-footer">
+          <form class="" action="../index.php" method="post">
+            <button type="submit" name="dia-logout-btn">
+              確定
+            </button>
+          </form>
+          <button type="button" name="button">
+            取消
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 <?php }
