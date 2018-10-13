@@ -14,27 +14,53 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>智慧型監視器</title>
 
-  <!---[if lt IE 9]-->
-<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <!--[endif]-->
+
 
   <script type="text/javascript">
 
     $( function() {
+
       //下拉選單
       $("#dropbtn").click(function(){
         $("#dropmenu").toggle();
       });
+      $("#dropbtn").mouseover(function(){
+        $("#dropmenu").show();
+      });
+      $("#outbtn").mouseover(function(){
+        $("#outbtn").css("background-color","red");
+        $("#outbtn").css("color","white");
+      });
+      $("#outbtn").mouseleave(function(){
+        $("#outbtn").css("color","black");
+        $("#outbtn").css("background-color","#00000000");
+      });
+
+      //登出
+      $("#outbtn").click(function(){
+        $("#logout").show();
+      });
+      //取消
+      $("#outcan").click(function(){
+        $("#logout").hide();
+      });
+
       //檢查登入 顯示按鈕
-      if ( {$idcheck} ) {
+      if ({$idcheck}) {
         $("#login_btn").hide();
         $("#signup_btn").hide();
         $("#dropbtn").show();
       };
+      /*
       //帳密錯誤
       if( {$usercheck} ){
-        $("#logwrong").show();
-      }
+
+      };
+
+      if ({$signup}) {
+        window.alert('註冊成功');
+      };
+      */
     });
 
   </script>
@@ -46,29 +72,28 @@
   <div class="container col-sm-12 col-xs-12" style="height:80px">
     <nav class="nav-tabs navbar-sticky-top" style="height:63px">
       <div class="row bg-dark" style="height:60px" >
-        <div class="col-sm-10 col-xs-10 text-light   h2">
+        <div class="col-sm-10 col-xs-10 text-light h2">
           智慧監視器
         </div>
         <!---登入 登出 紀錄 按鈕-->
-        <div id="login_btn" class="col-sm-1.col-xs-1 "  >
+        <div id="login_btn" class="col-sm-1 col-xs-1 "  >
           <button  type="submit" class="btn bg-dark te_white" data-toggle="modal" data-target="#login" style="height:60px;" >
             登入
           </button>
         </div>
-        <div id="signup_btn" class=" justify-content-end col-sm-1.col-xs-1 " >
+        <div id="signup_btn" class=" justify-content-end col-sm-1 col-xs-1 " >
           <button  type="submit" class="btn bg-dark te_white rounded mx-auto d-block" data-toggle="modal" data-target="#signup" style="height:60px;" >
             註冊
           </button>
         </div>
-        <div class="dropdown">
-          <button class="btn btn-dark dropdown-toggle" id="dropbtn" type="button" style="display:none;">
-            選單
+        <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
+          <button class="btn btn-dark dropdown-toggle" id="dropbtn" type="button" style="height:60px; display:none;">
+            {$userid}
           </button>
-          <div class="dropdown dropdown-menu-right" id="dropmenu" aria-labelledby="dropbtn" style="display:none;">
-            <a class="dropdown-item" href="../php/record.php">紀錄</a>
-            <button  type="submit" class="dropdown-item" data-toggle="modal" data-target="#logout">
-              登出
-            </button>
+          <div class="dropdown dropdown-menu-right" id="dropmenu" aria-labelledby="dropbtn" style=" display:none;">
+            <a class="dropdown-item" href="../phpweb/record.php">紀錄</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item"  id="outbtn">登出</a>
           </div>
         </div>
       </div>
@@ -132,7 +157,7 @@
               確定
             </button>
           </form>
-          <button type="button" name="button">
+          <button type="button" id="outcan" >
             取消
           </button>
         </div>
@@ -180,25 +205,6 @@
             </button>
           </div>
         </form>
-      </div>
-    </div>
-  </div>
-
-  <!--帳密輸入錯誤-->
-  <div id ="logwrong" style="display:none">
-    <div class="modal"  role="dialog" >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" aria-label="Close">
-            </button>
-          </div>
-          <div class="modal-body text-center">
-              帳號或密碼輸入錯誤
-          </div>
-          <div class="modal-footer">
-          </div>
-        </div>
       </div>
     </div>
   </div>

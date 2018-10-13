@@ -11,9 +11,11 @@ body{
   background-color: #A35EC4 ;
 }
 .te_white{
-  color: #FFFFFF;
+  color: ##FFFAF0;
 }
-
+.bg_white{
+  background-color: #FFFAF0 ;
+}
 .bg_blue1{
   background-color: #5897CF ;
 }
