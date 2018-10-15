@@ -3,7 +3,7 @@
 <html lang="zh" style="background:gray">
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/fixcolor.css">
+  <link rel="stylesheet" href="../css/fixcolor.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>智慧型監視器</title>
+  <title>智慧監視器</title>
 
 
 
@@ -27,13 +27,27 @@
       $("#dropbtn").mouseover(function(){
         $("#dropmenu").show();
       });
+      $("#dropbtn").mouseleave(function(){
+        $("#dropmenu").hide();
+      });
+      $("#dropmenu").mouseover(function(){
+        $("#dropmenu").show();
+      });
+      $("#dropmenu").mouseleave(function(){
+        $("#dropmenu").hide();
+      });
       $("#outbtn").mouseover(function(){
         $("#outbtn").css("background-color","red");
-        $("#outbtn").css("color","white");
       });
       $("#outbtn").mouseleave(function(){
-        $("#outbtn").css("color","black");
         $("#outbtn").css("background-color","#00000000");
+      });
+      $("div a:nth(0)").mouseover(function(){
+        $("div a:nth(0)").css("background-color","#00FF00");
+        $("div a:nth(0)").css("color","red");
+      });
+      $("div a:nth(0)").mouseleave(function(){
+        $("div a:nth(0)").css("background-color","#00000000");
       });
 
       //登出
@@ -51,6 +65,7 @@
         $("#signup_btn").hide();
         $("#dropbtn").show();
       };
+
       /*
       //帳密錯誤
       if( {$usercheck} ){
@@ -77,12 +92,12 @@
         </div>
         <!---登入 登出 紀錄 按鈕-->
         <div id="login_btn" class="col-sm-1 col-xs-1 "  >
-          <button  type="submit" class="btn bg-dark te_white" data-toggle="modal" data-target="#login" style="height:60px;" >
+          <button  type="submit" class="btn btn-dark " data-toggle="modal" data-target="#login" style="height:60px;" >
             登入
           </button>
         </div>
         <div id="signup_btn" class=" justify-content-end col-sm-1 col-xs-1 " >
-          <button  type="submit" class="btn bg-dark te_white rounded mx-auto d-block" data-toggle="modal" data-target="#signup" style="height:60px;" >
+          <button  type="submit" class="btn btn-dark rounded mx-auto d-block" data-toggle="modal" data-target="#signup" style="height:60px;" >
             註冊
           </button>
         </div>
@@ -90,10 +105,11 @@
           <button class="btn btn-dark dropdown-toggle" id="dropbtn" type="button" style="height:60px; display:none;">
             {$userid}
           </button>
-          <div class="dropdown dropdown-menu-right" id="dropmenu" aria-labelledby="dropbtn" style=" display:none;">
-            <a class="dropdown-item" href="../phpweb/record.php">紀錄</a>
+          <div class="dropdown dropdown-menu-right bg-secondary" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
+            <a class="dropdown-item text-light" href="../phpweb/record.php">紀錄</a>
+            <a class="dropdown-item" href="../phpweb/stream.php">即時影像</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item"  id="outbtn">登出</a>
+            <a class="dropdown-item text-light"  id="outbtn">登出</a>
           </div>
         </div>
       </div>
@@ -210,7 +226,7 @@
   </div>
 
   <!--首頁標題--->
-  <div class="text-center col-xs-12 col-sm-12 h1 " style="height:66px">
+  <div class="text-center col-xs-12 col-sm-12 h1 " >
     首  頁
   </div>
 

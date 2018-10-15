@@ -2,7 +2,7 @@
 
   $idcheck = 0 ;
   $usercheck = $idcheck ;
-  
+
   //接收session
   if( isset($_SESSION['acc']) && isset($_SESSION['pwd']) ){
 
@@ -25,7 +25,7 @@
   }
 
   //接收post
-  else  if( isset( $_POST['user'] ) && isset( $_POST['pwd'] ) ) {
+  if( isset( $_POST['user'] ) && isset( $_POST['pwd'] ) ) {
     $sqll = "select user,pwd from data" ;
     $mysqli->query('set names utf8') ;
     $sqllog = $mysqliuser->query($sqll) ;
