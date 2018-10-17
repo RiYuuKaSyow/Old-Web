@@ -10,7 +10,7 @@
     $same = 0 ;
     $signup = 0 ;
     while ( $sql1 && $sqlsame = $sql1->fetch_object() ){
-      if( ( $sqlsame->user === $_POST('sign_user') ) or ( $sqlsame->mail === $_POST('sign_email') ) ){
+      if( ( $sqlsame->user == $_POST('sign_user') ) or ( $sqlsame->mail == $_POST('sign_email') ) ){
         $same = 1 ;
         break ;
       }

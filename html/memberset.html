@@ -1,0 +1,20 @@
+<body>
+
+  <form  action="../php/uploadpic.php" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
+    <input type="file" name="pic0" value="選擇圖片">
+    <br>
+
+    <script type="text/javascript">
+    </script>
+    
+    <input type="file" name="pic{number[i]}" value="選擇圖片" style="display:none;">
+    <br>
+
+    <input type="button" id="morebtn" value="多張上傳">
+    <input type="submit" value="上傳">
+
+  </form>
+
+</body>

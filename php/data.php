@@ -36,6 +36,7 @@
     //刪除
     if ( isset($_POST['id'.$i])  ) {
       $sqlde = $mysqli->query( $sqldel . $list->id  ) ;
+      $_POST['id'.$i] = 0 ;
     }
 
     /* 偵測成員

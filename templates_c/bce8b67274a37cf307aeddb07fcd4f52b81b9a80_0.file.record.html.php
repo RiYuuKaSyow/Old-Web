@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-15 18:00:42
+/* Smarty version 3.1.32, created on 2018-10-17 13:01:55
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bc4b9aa9b8475_45827327',
+  'unifunc' => 'content_5bc716a3e312c2_77016601',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1539619240,
+      1 => 1539764922,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc4b9aa9b8475_45827327 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc716a3e312c2_77016601 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -39,46 +39,13 @@ function content_5bc4b9aa9b8475_45827327 (Smarty_Internal_Template $_smarty_tpl)
   <?php echo '<script'; ?>
  src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" ><?php echo '</script'; ?>
 >
-
+  <?php echo '<script'; ?>
+ src="../js/navbar.js"><?php echo '</script'; ?>
+>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>智慧監視器</title>
-
-  <?php echo '<script'; ?>
- type="text/javascript">
-
-    $(function(){
-
-      //下拉選單
-      $("#dropbtn").click(function(){
-        $("#dropmenu").toggle();
-      });
-      $("#dropbtn").mouseover(function(){
-        $("#dropmenu").show();
-      });
-      $("#outbtn").mouseover(function(){
-        $("#outbtn").css("background-color","red");
-        $("#outbtn").css("color","white");
-      });
-      $("#outbtn").mouseleave(function(){
-        $("#outbtn").css("color","black");
-        $("#outbtn").css("background-color","#00000000");
-      });
-
-      //登出
-      $("#outbtn").click(function(){
-        $("#logout").show();
-      });
-      //取消
-      $("#outcan").click(function(){
-        $("#logout").hide();
-      });
-
-    });
-
-  <?php echo '</script'; ?>
->
 
 </head>
 <body>
@@ -87,10 +54,12 @@ function content_5bc4b9aa9b8475_45827327 (Smarty_Internal_Template $_smarty_tpl)
   <div class="container col-sm-12 col-xs-12" style="height:80px">
     <nav class="nav-tabs navbar-sticky-top" style="height:63px">
       <div class="row bg-dark" style="height:60px" >
-        <div class="col-sm-10 col-xs-10 text-light h2">
-          智慧監視器
-          <!---下拉選單-->
+        <div class="col-sm-10 col-xs-10">
+          <div class="col-sm-3 col-xs-3">
+            <a href="../index.php" class="text-light h2" style=" text-decoration:none;" >智慧監視器</a>
+          </div>
         </div>
+        <!--下拉選單-->
         <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
           <button class="btn btn-dark dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
             <?php echo $_smarty_tpl->tpl_vars['userid']->value;?>
@@ -98,7 +67,8 @@ function content_5bc4b9aa9b8475_45827327 (Smarty_Internal_Template $_smarty_tpl)
           </button>
           <div class="dropdown dropdown-menu-right bg-secondary" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
             <a class="dropdown-item text-light" href="../index.php">首頁</a>
-            <a class="dropdown-item text-light" href="stream.php">即時影像</a>
+            <a class="dropdown-item text-light" href="../web/stream.php">即時影像</a>
+            <a class="dropdown-item text-light" href="../web/user.php">設定</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text-light"  id="outbtn">登出</a>
           </div>
@@ -375,6 +345,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] = $__section_s
       </div>
     </div>
   </div>
+
 </body>
 </html>
 <?php }
