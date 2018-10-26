@@ -1,20 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    $(function(){
+      $("#morebtn").click(function(){
+        morebtn = '' ;
+        for( i = 0 ; i < 8 ; i++){
+          morebtn += '<input type="file" name="pic' + i + ' value="選擇圖片">' +"\n" ;
+        }
+        $('#uploadbtn').html(morebtn);
+      });
+    });
+  </script>
+</head>
 <body>
 
   <form  action="../php/uploadpic.php" method="post" enctype="multipart/form-data">
 
-    <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
-    <input type="file" name="pic0" value="選擇圖片">
-    <br>
 
-    <script type="text/javascript">
-    </script>
-    
-    <input type="file" name="pic{number[i]}" value="選擇圖片" style="display:none;">
-    <br>
+      <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
 
-    <input type="button" id="morebtn" value="多張上傳">
-    <input type="submit" value="上傳">
+      成員名字:
+      <input type="text" name="member_name">
+      <br>
+
+      <span id='uploadbtn' class="">
+        <input type="file" name="pic0" value="選擇圖片">
+        <br>
+      </span>
+
+      <input type="button" id="morebtn" value="多張上傳">
+      <input type="submit" value="上傳">
+
 
   </form>
 
 </body>
+</html>

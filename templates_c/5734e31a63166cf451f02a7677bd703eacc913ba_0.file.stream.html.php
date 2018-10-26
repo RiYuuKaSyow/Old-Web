@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-17 13:01:57
+/* Smarty version 3.1.32, created on 2018-10-24 11:01:44
   from 'E:\xampp\htdocs\html\stream.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bc716a5351863_69565014',
+  'unifunc' => 'content_5bd034f8135e10_24420167',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5734e31a63166cf451f02a7677bd703eacc913ba' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\stream.html',
-      1 => 1539764913,
+      1 => 1540371696,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc716a5351863_69565014 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd034f8135e10_24420167 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/fixcolor.css">
   <?php echo '<script'; ?>
@@ -88,7 +91,7 @@ function content_5bc716a5351863_69565014 (Smarty_Internal_Template $_smarty_tpl)
   <!---網頁navbar--->
   <div class="container col-sm-12 col-xs-12" style="height:80px">
     <nav class="nav-tabs navbar-sticky-top" style="height:63px">
-      <div class="row bg-dark" style="height:60px" >
+      <div class="row bg-success" style="height:60px" >
         <div class="col-sm-10 col-xs-10">
           <div class="col-sm-3 col-xs-3">
             <a href="../index.php" class="text-light h2" style=" text-decoration:none;" >智慧監視器</a>
@@ -96,11 +99,11 @@ function content_5bc716a5351863_69565014 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <!--下拉選單-->
         <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
-          <button class="btn btn-dark dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
+          <button class="btn btn-success dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
             <?php echo $_smarty_tpl->tpl_vars['userid']->value;?>
 
           </button>
-          <div class="dropdown dropdown-menu-right bg-secondary" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
+          <div class="dropdown dropdown-menu-right bg-success" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
             <a class="dropdown-item text-light" href="../index.php">首頁</a>
             <a class="dropdown-item text-light" href="../web/record.php">紀錄</a>
             <a class="dropdown-item text-light" href="../web/user.php">設定</a>
@@ -111,11 +114,12 @@ function content_5bc716a5351863_69565014 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </nav>
   </div>
+
   <!--網頁內容div-->
   <div class="text-center">
     <!--標題-->
     <div class="col-sm-12 col-xs-12">
-      <div class="h4">
+      <div class="h2">
         即時影像
       </div>
     </div>
@@ -132,7 +136,7 @@ function content_5bc716a5351863_69565014 (Smarty_Internal_Template $_smarty_tpl)
     <!---即時影像--->
     <div class="col-sm-12 col-xs-12">
       <div class="mx-auto text-center" >
-        <iframe id="stream" width="600px" height="400px" src="https://www.youtube.com/embed/PRlAY486hVg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:none;"></iframe>
+        <iframe id="stream" width="600px" height="380px"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:none;"></iframe>
       </div>
     </div>
   </div>

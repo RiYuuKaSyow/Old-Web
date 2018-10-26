@@ -2,12 +2,8 @@
   require("../php/set.php");
   include("../php/linkmysql.php");
   include("../php/idcheck.php");
-
   try {
     if ( $idcheck ) {
-      if( isset( $_FILES["pic"] ) ){
-        include("../php/upload.php");
-      }
       $smarty->display('../html/user.html') ;
     }
     else {

@@ -2,6 +2,9 @@
 <!----->
 <html lang="zh">
 <head>
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/fixcolor.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -14,6 +17,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>智慧監視器</title>
+
+  <script type="text/javascript">
+    if( {$usercheck} == '0' )
+      window.alert("帳號或密碼錯誤");
+    if( {$usersmae} )
+      window.alert("帳號已使用");
+    if ( {$mailsame} ) {
+      window.alert("信箱已使用");
+    }
+  </script>
 
   <script type="text/javascript">
 
@@ -157,19 +170,19 @@
         <form class="" action="index.php" method="post">
           <div class="modal-body text-center">
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" name="sign_user" placeholder="帳號">
+              <input type="text" class="form-control" maxlength="12" name="sign_user" required="required" placeholder="帳號(限長12)">
               <span class="help-block"></span>
             </div>
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" name="sign_pwd" placeholder="密碼">
+              <input type="text" class="form-control" maxlength="12" name="sign_pwd" required="required" placeholder="密碼(限長12)">
               <span class="help-block"></span>
             </div>
             <div class="form-group col-md-12">
-              <input type="password" class="form-control" placeholder="再次輸入密碼">
+              <input type="password" class="form-control" required="required" placeholder="再次輸入密碼">
               <span class="help-block"></span>
             </div>
             <div class="form-group col-md-12">
-              <input type="email" class="form-control" name="sign_email" placeholder="電子信箱">
+              <input type="email" class="form-control" name="sign_email" required="required" placeholder="電子信箱">
               <span class="help-block"></span>
             </div>
           </div>

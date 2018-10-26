@@ -30,7 +30,7 @@ $( function() {
     $("div a:nth(1)").css("background-color","#00000000");
   });
   $("div a:nth(2)").mouseover(function(){
-    $("div a:nth(2)").css("background-color","green");
+    $("div a:nth(2)").css("background-color","#a5ffb0");
   });
   $("div a:nth(2)").mouseleave(function(){
     $("div a:nth(2)").css("background-color","#00000000");
