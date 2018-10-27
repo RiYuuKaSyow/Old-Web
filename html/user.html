@@ -21,7 +21,7 @@
     $(function(){
       //帳號設定頁面
       $("#setting").click(function(){
-        $("#setdiv").attr( "src" , "userset.html");
+        $("#setdiv").attr( "src" , "../web/accset.php");
         $("#setdiv").show();
       });
 
@@ -64,7 +64,7 @@
         <!--下拉選單-->
         <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
           <button class="btn btn-danger dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
-            {$userid}
+            {$user->user}
           </button>
           <div class="dropdown dropdown-menu-right bg-danger" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
             <a class="dropdown-item text-light" href="../index.php">首頁</a>
@@ -103,7 +103,7 @@
 
       </div>
       <div class="col-xs-8 col-sm-8" >
-          <iframe id="setdiv" style="display:none; width: 750px; height:400px ;" ></iframe>
+          <iframe id="setdiv" src="../web/accset.php" style="width: 900px; height:600px ;" ></iframe>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
   //接收session
   if( isset($_SESSION['acc']) && isset($_SESSION['pwd']) ){
 
-    $sqll = "select user,pwd from data" ;
+    $sqll = "select user,pwd,mail from data" ;
     $mysqli->query('set names utf8') ;
     $sqllog = $mysqliuser->query($sqll) ;
     while ( $user = $sqllog->fetch_object() ){
@@ -15,8 +15,9 @@
         $_SESSION['acc'] =  $user->user ;
         $_SESSION['pwd'] =  $user->pwd ;
         $idcheck = 1 ;
-        $smarty->assign( 'userid' , $user->user ) ;
+        $smarty->assign( 'user' , $user ) ;
         break ;
+
       }
 
       $usercheck = $idcheck ;

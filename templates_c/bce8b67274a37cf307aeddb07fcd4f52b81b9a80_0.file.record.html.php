@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-26 14:24:58
+/* Smarty version 3.1.32, created on 2018-10-27 15:52:38
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bd3079ad4bec0_81673608',
+  'unifunc' => 'content_5bd46da60a2423_48658633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1540556697,
+      1 => 1540648343,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd3079ad4bec0_81673608 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd46da60a2423_48658633 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -78,7 +78,7 @@ function content_5bd3079ad4bec0_81673608 (Smarty_Internal_Template $_smarty_tpl)
         <!--下拉選單-->
         <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
           <button class="btn btn-info dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
-            <?php echo $_smarty_tpl->tpl_vars['userid']->value;?>
+            <?php echo $_smarty_tpl->tpl_vars['user']->value->user;?>
 
           </button>
           <div class="dropdown dropdown-menu-right bg-info" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
