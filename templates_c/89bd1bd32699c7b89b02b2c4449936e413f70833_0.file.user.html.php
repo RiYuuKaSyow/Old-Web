@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-26 14:44:54
+/* Smarty version 3.1.32, created on 2018-10-27 16:56:17
   from 'E:\xampp\htdocs\html\user.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bd30c46a3fd78_02170974',
+  'unifunc' => 'content_5bd47c919cf144_75360913',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89bd1bd32699c7b89b02b2c4449936e413f70833' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\user.html',
-      1 => 1540557893,
+      1 => 1540652176,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd30c46a3fd78_02170974 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd47c919cf144_75360913 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -55,7 +55,7 @@ function content_5bd30c46a3fd78_02170974 (Smarty_Internal_Template $_smarty_tpl)
     $(function(){
       //帳號設定頁面
       $("#setting").click(function(){
-        $("#setdiv").attr( "src" , "userset.html");
+        $("#setdiv").attr( "src" , "../web/accset.php");
         $("#setdiv").show();
       });
 
@@ -99,7 +99,7 @@ function content_5bd30c46a3fd78_02170974 (Smarty_Internal_Template $_smarty_tpl)
         <!--下拉選單-->
         <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
           <button class="btn btn-danger dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
-            <?php echo $_smarty_tpl->tpl_vars['userid']->value;?>
+            <?php echo $_smarty_tpl->tpl_vars['user']->value->user;?>
 
           </button>
           <div class="dropdown dropdown-menu-right bg-danger" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
@@ -139,7 +139,7 @@ function content_5bd30c46a3fd78_02170974 (Smarty_Internal_Template $_smarty_tpl)
 
       </div>
       <div class="col-xs-8 col-sm-8" >
-          <iframe id="setdiv" style="display:none; width: 750px; height:400px ;" ></iframe>
+          <iframe id="setdiv" style="display:none; width: 900px; height:600px ;" ></iframe>
       </div>
     </div>
   </div>
