@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-27 15:52:38
+/* Smarty version 3.1.32, created on 2018-11-15 10:34:46
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bd46da60a2423_48658633',
+  'unifunc' => 'content_5bed3db6d0fce7_71149678',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1540648343,
+      1 => 1542274484,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd46da60a2423_48658633 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bed3db6d0fce7_71149678 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -285,7 +285,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] = $__section_s
                       圖片
                     </button>
                   -->
-                    <img src="../i/123.png" width="200px" height="100px">
+                    <img src="../i/img2.jpg" width="200px" height="100px">
                   </td>
                 </tr>
                   <!--開啟dialog顯示圖片-->

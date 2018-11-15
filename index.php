@@ -26,6 +26,6 @@
   include("php/signup.php") ;
 
   //套用樣板
-  $smarty->display( "html/index.html" ) ;
+  $smarty->display( "index.html" ) ;
 
 ?>

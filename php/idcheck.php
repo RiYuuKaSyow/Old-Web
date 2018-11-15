@@ -37,7 +37,7 @@
         $_SESSION['acc'] =  $user->user ;
         $_SESSION['pwd'] =  $user->pwd ;
         $idcheck = 1 ;
-        $smarty->assign( 'userid' , $user->user ) ;
+        $smarty->assign( 'user' , $user ) ;
         break ;
       }
 

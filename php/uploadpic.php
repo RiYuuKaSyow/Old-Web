@@ -12,9 +12,19 @@
       throw new \Exception("沒有檔案");
     }
     $dir = "../uploadpic/";
-    $tmp = $_FILES['pic0']["tmp_name"] ;
-    $file = $_FILES['pic0']["name"] ;
-    if(move_uploaded_file( $tmp , $dir . "0001.jpg" )){
+
+    for( $i = 0 ; $i <8 ; $i++){
+
+      $tmp = $_FILES['pic'.$i]["tmp_name"] ;
+      $file = $_FILES['pic'.$i]["name"] ;
+
+      if(move_uploaded_file( $tmp , $dir . .$member_name ."0".$i.".jpg")){
+        $f = 1 ;
+      }
+
+    }
+
+    if($f)){
       //header(' refresh:2 ; url="../web/memberset.php" ') ;
       $mysqliuser->query($sql1 . $member_name . ',' . $_SESSION['acc'] . ',' . $dir . $file . ');' ) ;
       echo "上傳成功" ;
