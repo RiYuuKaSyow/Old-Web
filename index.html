@@ -28,11 +28,14 @@
     }
   </script>
 
+
+
+
   <script type="text/javascript">
 
     $( function() {
       //檢查登入 顯示按鈕
-      if ({$idcheck}) {
+      if ({$idcheck}){
         $("#login_btn").hide();
         $("#signup_btn").hide();
         $("#dropbtn").show();
@@ -47,33 +50,35 @@
   <!---網頁navbar-->
   <div class="container col-sm-12 col-xs-12" style="height:80px">
     <nav class="nav-tabs navbar-sticky-top" style="height:63px">
-      <div class="row bg-dark" style="height:60px" >
+      <div class="row" style="height:60px" >
         <div class="col-sm-10 col-xs-10">
           <div class="col-sm-3 col-xs-3">
-            <a href="../index.php" class="text-light h2" style=" text-decoration:none;" >智慧監視器</a>
+            <a href="../index.php" class="h2" style=" text-decoration:none;" >
+              智慧監視器
+            </a>
           </div>
         </div>
         <!---登入 登出 紀錄 按鈕-->
         <div id="login_btn" class="col-sm-1 col-xs-1 "  >
-          <button  type="submit" class="btn btn-dark " data-toggle="modal" data-target="#login" style="height:60px;" >
+          <button  type="submit" class="btn" data-toggle="modal" data-target="#login" style="height:60px;" >
             登入
           </button>
         </div>
         <div id="signup_btn" class=" justify-content-end col-sm-1 col-xs-1 " >
-          <button  type="submit" class="btn btn-dark rounded mx-auto d-block" data-toggle="modal" data-target="#signup" style="height:60px;" >
+          <button  type="submit" class="btn btn rounded mx-auto d-block" data-toggle="modal" data-target="#signup" style="height:60px;" >
             註冊
           </button>
         </div>
         <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
-          <button class="btn btn-dark dropdown-toggle" id="dropbtn" type="button" style="height:60px; display:none;">
+          <button class="bg-white btn btn dropdown-toggle" id="dropbtn" type="button" style="height:60px; display:none;">
             {$user->user}
           </button>
-          <div class="dropdown dropdown-menu-right bg-secondary" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
-            <a class="dropdown-item text-light" href="web/record.php">紀錄</a>
-            <a class="dropdown-item text-light" href="web/stream.php">即時影像</a>
-            <a class="dropdown-item text-light" href="web/user.php">設定</a>
+          <div class="dropdown dropdown-menu-right" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
+            <a class="dropdown-item text" href="web/record.php">紀錄</a>
+            <a class="dropdown-item text" href="web/stream.php">即時影像</a>
+            <a class="dropdown-item text" href="web/user.php">設定</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-light"  id="outbtn">登出</a>
+            <a class="dropdown-item text"  id="outbtn">登出</a>
           </div>
         </div>
       </div>

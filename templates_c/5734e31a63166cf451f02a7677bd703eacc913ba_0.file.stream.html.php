@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-27 15:52:40
+/* Smarty version 3.1.32, created on 2018-11-27 14:46:02
   from 'E:\xampp\htdocs\html\stream.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bd46da823a414_25908769',
+  'unifunc' => 'content_5bfd4a9a368a99_74461862',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5734e31a63166cf451f02a7677bd703eacc913ba' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\stream.html',
-      1 => 1540648338,
+      1 => 1543326360,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd46da823a414_25908769 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfd4a9a368a99_74461862 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -29,6 +29,7 @@ function content_5bd46da823a414_25908769 (Smarty_Internal_Template $_smarty_tpl)
   <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/fixcolor.css">
+  <link rel="stylesheet" href="/css/test.css">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
@@ -57,30 +58,6 @@ function content_5bd46da823a414_25908769 (Smarty_Internal_Template $_smarty_tpl)
 
     $(function(){
 
-      //切換頻道
-      $("#chbtn").click(function(){
-        switch($('#streamch').find(':selected').val()) {
-          case '1':
-            $("#stream").attr( "src" , "<?php echo $_smarty_tpl->tpl_vars['channel1']->value;?>
-" );
-            $("#stream").show();
-            break ;
-          case '2':
-            $("#stream").attr( "src" , "<?php echo $_smarty_tpl->tpl_vars['channel2']->value;?>
-" );
-            $("#stream").show();
-            break ;
-          case '3':
-            $("#stream").attr( "src" , "<?php echo $_smarty_tpl->tpl_vars['channel3']->value;?>
-" );
-            $("#stream").show();
-            break ;
-          case '0':
-            $("#stream").hide();
-            break;
-        }
-      });
-
     });
 
   <?php echo '</script'; ?>
@@ -90,27 +67,31 @@ function content_5bd46da823a414_25908769 (Smarty_Internal_Template $_smarty_tpl)
 <body>
   <!---網頁navbar--->
   <div class="container col-sm-12 col-xs-12" style="height:80px">
-    <nav class="nav-tabs navbar-sticky-top" style="height:63px">
-      <div class="row bg-success" style="height:60px" >
+    <nav class="nav-tabs navbar-sticky-top" style="height:73px">
+      <div class="row bg" style="height:60px" >
         <div class="col-sm-10 col-xs-10">
           <div class="col-sm-3 col-xs-3">
-            <a href="../index.php" class="text-light h2" style=" text-decoration:none;" >智慧監視器</a>
+            <a href="../index.php" class="h2" style=" text-decoration:none;" >
+              智慧監視器
+            </a>
           </div>
         </div>
         <!--下拉選單-->
         <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
-          <button class="btn btn-success dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
+          <button class="btn bg-white dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
             <?php echo $_smarty_tpl->tpl_vars['user']->value->user;?>
 
           </button>
-          <div class="dropdown dropdown-menu-right bg-success" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
-            <a class="dropdown-item text-light" href="../index.php">首頁</a>
-            <a class="dropdown-item text-light" href="../web/record.php">紀錄</a>
-            <a class="dropdown-item text-light" href="../web/user.php">設定</a>
+          <div class="dropdown dropdown-menu-right" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
+            <a class="dropdown-item " href="../index.php">首頁</a>
+            <a class="dropdown-item " href="../web/record.php">紀錄</a>
+            <a class="dropdown-item " href="../web/user.php">設定</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-light"  id="outbtn">登出</a>
+            <a class="dropdown-item"  id="outbtn">登出</a>
           </div>
         </div>
+      </div>
+      <div class="anima">
       </div>
     </nav>
   </div>
@@ -123,21 +104,128 @@ function content_5bd46da823a414_25908769 (Smarty_Internal_Template $_smarty_tpl)
         即時影像
       </div>
     </div>
-    <!---選擇頻道--->
-    <div class="col-sm-12 col-xs-12" style="height:40px;">
-      <select class="" id="streamch">
-        <option value="0">請選擇頻道</option>
-        <option value="1">頻道1</option>
-        <option value="2">頻道2</option>
-        <option value="3">頻道3</option>
-      </select>
-      <button type="button" id="chbtn" class="btn btn-light" style="height:40px;">確認</button>
+    <!---即時影像
+    <div class="" style=" width:400px;heigh:300px; ">
+    <div id="MyWidgetWrap" style="width: 400px; height: 300px;">
+      <link href="http://120.101.8.8:8080/qiot/freeboard/css/jquery.jqplot.min.css" rel="stylesheet" />
+      <link href="http://120.101.8.8:8080/qiot/freeboard/css/freeboard.css" rel="stylesheet" />
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/js/freeboard.thirdparty.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript">
+          _res = {};
+          $.ajax({
+              type: 'GET',
+              async: false,
+              url: "http://120.101.8.8:8080/qiotapp/v1/freeboardwidgetdetails/5bf8014f9c31dc003388a62a?key=jo8d5cfh000h1e40e3e2cpxn",
+              success: function(ret) {
+                  if (ret.hasOwnProperty('result')) {
+                      _res.layout = ret.result;
+                      _res.id = "5bf800c69c31dc003388a5d7";
+                      _res.url = "http://120.101.8.8:8080";
+                      _res.urlport = "http://120.101.8.8:8080/qiot/freeboard/";
+                      _res.datasources = "http://120.101.8.8:8080/qiotapp/v1/livedata/?topic=qiot/things/admin/cap&key=jo8d5cfh000h1e40e3e2cpxn";
+                      _res.APIKey = "jo8d5cfh000h1e40e3e2cpxn";
+                  } else {
+                  _res.error = true;
+                  }
+              },error: function(ret) {
+                  _res = JSON.parse(ret.responseText);
+                  _res.url = "http://120.101.8.8:8080";
+                  _res.urlport = "http://120.101.8.8:8080/qiot/freeboard/";
+              }
+            });
+      <?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/plugins/customize/embed.dom.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/plugins/customize/embed.load.js"><?php echo '</script'; ?>
+>
     </div>
-    <!---即時影像--->
-    <div class="col-sm-12 col-xs-12">
-      <div class="mx-auto text-center" >
-        <iframe id="stream" width="600px" height="380px"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:none;"></iframe>
-      </div>
+  </div>
+--->
+    <!---溫度感測--->
+    <div id="MyWidgetWrap" style="width: 400px; height: 300px;">
+      <link href="http://120.101.8.8:8080/qiot/freeboard/css/jquery.jqplot.min.css" rel="stylesheet" />
+      <link href="http://120.101.8.8:8080/qiot/freeboard/css/freeboard.css" rel="stylesheet" />
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/js/freeboard.thirdparty.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript">
+          _res = {};
+          $.ajax({
+              type: 'GET',
+              async: false,
+              url: "http://120.101.8.8:8080/qiotapp/v1/freeboardwidgetdetails/5bfd3a809c31dc00338909dc?key=jo8d5cfh000h1e40e3e2cpxn",
+              success: function(ret) {
+                  if (ret.hasOwnProperty('result')) {
+                      _res.layout = ret.result;
+                      _res.id = "5bf800c69c31dc003388a5d7";
+                      _res.url = "http://120.101.8.8:8080";
+                      _res.urlport = "http://120.101.8.8:8080/qiot/freeboard/";
+                      _res.datasources = "http://120.101.8.8:8080/qiotapp/v1/livedata/?topic=qiot/things/admin/arduino/temperature&key=jo8d5cfh000h1e40e3e2cpxn";
+                      _res.APIKey = "jo8d5cfh000h1e40e3e2cpxn";
+                  } else {
+                  _res.error = true;
+                  }
+              },error: function(ret) {
+                  _res = JSON.parse(ret.responseText);
+                  _res.url = "http://120.101.8.8:8080";
+                  _res.urlport = "http://120.101.8.8:8080/qiot/freeboard/";
+              }
+            });
+      <?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/plugins/customize/embed.dom.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/plugins/customize/embed.load.js"><?php echo '</script'; ?>
+>
+  </div>
+    <!---濕度感測--->
+    <div id="MyWidgetWrap" style="width: 400px; height: 300px;">
+      <link href="http://120.101.8.8:8080/qiot/freeboard/css/jquery.jqplot.min.css" rel="stylesheet" />
+      <link href="http://120.101.8.8:8080/qiot/freeboard/css/freeboard.css" rel="stylesheet" />
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/js/freeboard.thirdparty.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript">
+          _res = {};
+          $.ajax({
+              type: 'GET',
+              async: false,
+              url: "http://120.101.8.8:8080/qiotapp/v1/freeboardwidgetdetails/5bfd3a799c31dc00338909d6?key=jo8d5cfh000h1e40e3e2cpxn",
+              success: function(ret) {
+                  if (ret.hasOwnProperty('result')) {
+                      _res.layout = ret.result;
+                      _res.id = "5bf800c69c31dc003388a5d7";
+                      _res.url = "http://120.101.8.8:8080";
+                      _res.urlport = "http://120.101.8.8:8080/qiot/freeboard/";
+                      _res.datasources = "http://120.101.8.8:8080/qiotapp/v1/livedata/?topic=qiot/things/admin/arduino/humidity&key=jo8d5cfh000h1e40e3e2cpxn";
+                      _res.APIKey = "jo8d5cfh000h1e40e3e2cpxn";
+                  } else {
+                  _res.error = true;
+                  }
+              },error: function(ret) {
+                  _res = JSON.parse(ret.responseText);
+                  _res.url = "http://120.101.8.8:8080";
+                  _res.urlport = "http://120.101.8.8:8080/qiot/freeboard/";
+              }
+            });
+      <?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/plugins/customize/embed.dom.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/plugins/customize/embed.load.js"><?php echo '</script'; ?>
+>
     </div>
   </div>
 
