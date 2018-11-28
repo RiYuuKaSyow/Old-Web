@@ -8,12 +8,13 @@
 
     //查詢帳號信箱
     $sqlsel1 = "select user,mail from data where user = '$user' ;" ;
-    $sqlsel2 = "select user,mail from data where mail = '$email ;" ;
+    $sqlsel2 = "select user,mail from data where mail = '$email' ;" ;
     //查詢是否重複
     $mysqli->query('set names utf8') ;
     $sql1 = $mysqliuser->query($sqlsel1) ;
     $sql2 = $mysqliuser->query($sqlsel2) ;
     $rows1 = $sql1->num_rows ;
+    $rows2 = $sql2->num_rows ;
     //$sql1 = $mysqli->query($sqlsel) ;
     $signup = 0 ;
     //如果沒有重複 新增帳號
@@ -30,10 +31,8 @@
     else {
       $smarty->assign("usersmae" , '1') ;
     }
-    $smarty->assign("mailsame" , '0') ;
-    $smarty->assign("usersmae" , '0') ;
-
 
   }
-
+  $smarty->assign("mailsame" , '0') ;
+  $smarty->assign("usersmae" , '0') ;
 ?>

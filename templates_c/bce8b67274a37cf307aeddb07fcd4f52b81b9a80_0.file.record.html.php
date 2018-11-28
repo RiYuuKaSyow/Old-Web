@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-27 14:34:01
+/* Smarty version 3.1.32, created on 2018-11-28 07:59:31
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfd47c98c8600_28455165',
+  'unifunc' => 'content_5bfe3cd3592e19_91513246',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1543325639,
+      1 => 1543388369,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfd47c98c8600_28455165 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe3cd3592e19_91513246 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -67,7 +67,7 @@ function content_5bfd47c98c8600_28455165 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 
   <!---網頁navbar--->
-  <div class="container col-sm-12 col-xs-12">
+  <div class="webnav container col-sm-12 col-xs-12">
     <nav class="nav-tabs navbar-sticky-top" style="height:63px">
       <div class="row " style="height:60px" >
         <div class="col-sm-10 col-xs-10">
@@ -94,7 +94,6 @@ function content_5bfd47c98c8600_28455165 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </nav>
   </div>
-
   <!--紀錄頁標題-->
   <div class="text-center">
     <div class="">

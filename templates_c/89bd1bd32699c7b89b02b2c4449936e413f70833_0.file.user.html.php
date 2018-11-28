@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-27 14:31:53
+/* Smarty version 3.1.32, created on 2018-11-28 08:05:05
   from 'E:\xampp\htdocs\html\user.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfd4749c7ed41_48653856',
+  'unifunc' => 'content_5bfe3e21e51f23_67019193',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89bd1bd32699c7b89b02b2c4449936e413f70833' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\user.html',
-      1 => 1543325512,
+      1 => 1543388703,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfd4749c7ed41_48653856 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe3e21e51f23_67019193 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -86,9 +86,8 @@ function content_5bfd4749c7ed41_48653856 (Smarty_Internal_Template $_smarty_tpl)
 >
 </head>
 <body>
-
   <!---網頁navbar--->
-  <div class="container col-sm-12 col-xs-12" style="height:80px">
+  <div class="webnav container col-sm-12 col-xs-12" style="height:80px">
     <nav class="nav-tabs navbar-sticky-top" style="height:63px">
       <div class="row" style="height:60px" >
         <div class="col-sm-10 col-xs-10">
@@ -115,20 +114,19 @@ function content_5bfd4749c7ed41_48653856 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </nav>
   </div>
-
   <div class="container">
     <div class="row">
       <div id="userleft" class="text-center "  style="width: 150px; height:160px;">
         <p>
-          <div id="setting" class="leftbtn" style=" height:50px ; background-color:#00FFFF;">
+          <div id="setting" class="text_blue leftbtn" style=" height:50px ; ">
             帳號設定
           </div>
           <div class="dropdown-divider" style="height:1px"></div>
-          <div class="leftbtn" id="setmember" style="height:50px; background-color:#FF00FF;">
+          <div class="text_purple leftbtn" id="setmember" style="height:50px;">
             <div class="" >
               管理成員
             </div>
-            <div id="setmember_menu" style="display:none; background-color:#FF00FF; ">
+            <div id="setmember_menu" style="display:none;">
               <ul>
                 <li><a class="h5" id="upload">新增</a></li>
                 <div class="dropdown-divider"></div>

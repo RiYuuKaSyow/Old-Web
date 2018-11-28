@@ -1,6 +1,8 @@
 .anima{
   width: 13px;
   height: 13px;
+  border-radius:999em;
+  background-color: #FF00FF ;
   position:relative;
   animation-name: maveltr;
   animation-duration: 20s;

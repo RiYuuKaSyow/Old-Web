@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-27 14:46:02
+/* Smarty version 3.1.32, created on 2018-11-28 08:13:30
   from 'E:\xampp\htdocs\html\stream.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfd4a9a368a99_74461862',
+  'unifunc' => 'content_5bfe401a39f378_65142311',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5734e31a63166cf451f02a7677bd703eacc913ba' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\stream.html',
-      1 => 1543326360,
+      1 => 1543388419,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfd4a9a368a99_74461862 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfe401a39f378_65142311 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -53,20 +53,10 @@ function content_5bfd4a9a368a99_74461862 (Smarty_Internal_Template $_smarty_tpl)
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>智慧監視器</title>
 
-  <?php echo '<script'; ?>
- type="text/javascript">
-
-    $(function(){
-
-    });
-
-  <?php echo '</script'; ?>
->
-
 </head>
 <body>
   <!---網頁navbar--->
-  <div class="container col-sm-12 col-xs-12" style="height:80px">
+  <div class="webnav container col-sm-12 col-xs-12" style="height:80px">
     <nav class="nav-tabs navbar-sticky-top" style="height:73px">
       <div class="row bg" style="height:60px" >
         <div class="col-sm-10 col-xs-10">

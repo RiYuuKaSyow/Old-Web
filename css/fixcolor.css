@@ -13,9 +13,33 @@ body{
 .text_white{
   color: ##FFFAF0;
 }
+.text_purple{
+  color: ##A35EC4;
+}
+.text_blue{
+  color: ##CF00F0;
+}
 .bg_white{
   background-color: #FFFAF0 ;
 }
 .bg_blue1{
   background-color: #5897CF ;
+}
+body{
+  margin-top: 80px;
+}
+.webnav{
+  position: fixed;
+  top:0px;
+  background-color: white;
+  z-index: 100;
+}
+ul li{
+  margin-top: 50px;
+  display: inline;
+}
+i{
+  height: 50px;
+  width: 50px;
+  border-radius: 999em;
 }
