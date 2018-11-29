@@ -35,11 +35,13 @@ body{
   z-index: 100;
 }
 ul li{
-  margin-top: 50px;
+  width: 10px;
+  margin-right: 20px;
   display: inline;
 }
-i{
-  height: 50px;
-  width: 50px;
+ul li i{
+  transform: scale(3);
+  height: 10px;
+  width: 10px;
   border-radius: 999em;
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-28 07:59:31
+/* Smarty version 3.1.32, created on 2018-11-29 15:11:40
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfe3cd3592e19_91513246',
+  'unifunc' => 'content_5bfff39caf23c1_48873748',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1543388369,
+      1 => 1543500698,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfe3cd3592e19_91513246 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfff39caf23c1_48873748 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -30,6 +30,7 @@ function content_5bfe3cd3592e19_91513246 (Smarty_Internal_Template $_smarty_tpl)
   <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/fixcolor.css">
+  <link rel="stylesheet" href="../css/test.css">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
@@ -72,9 +73,13 @@ function content_5bfe3cd3592e19_91513246 (Smarty_Internal_Template $_smarty_tpl)
       <div class="row " style="height:60px" >
         <div class="col-sm-10 col-xs-10">
           <div class="col-sm-3 col-xs-3">
-            <a href="../index.php" class="h2" style=" text-decoration:none;" >
+            <div class="anima">
+            </div>
+            <a href="../index.php" class="h2" style="text-decoration:none;" >
               智慧監視器
             </a>
+            <div class="anima2">
+            </div>
           </div>
         </div>
         <!--下拉選單-->

@@ -25,25 +25,27 @@
 </head>
 <body>
 
-  <form  action="../php/uploadpic.php" method="post" enctype="multipart/form-data">
+  <div class="container">
+    <div class="row">
+      <form  action="../php/uploadpic.php" method="post" enctype="multipart/form-data">
 
+          <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
 
-      <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
+          成員名字:
+          <input type="text" name="member_name">
+          <br>
 
-      成員名字:
-      <input type="text" name="member_name">
-      <br>
+          <span id='uploadbtn' class="">
+            <input type="file" name="pic0" value="選擇圖片">
+            <br>
+          </span>
+    </div>
 
-      <span id='uploadbtn' class="">
-        <input type="file" name="pic0" value="選擇圖片">
-        <br>
-      </span>
+        <input type="button" id="morebtn" value="多張上傳">
+        <input type="submit" value="上傳">
 
-      <input type="button" id="morebtn" value="多張上傳">
-      <input type="submit" value="上傳">
-
-
-  </form>
+    </form>
+  </div>
 
 </body>
 </html>

@@ -24,7 +24,7 @@ $( function() {
     $("#outbtn").css("background-color","#00000000");
   });
   $("div a:nth(1)").mouseover(function(){
-    $("div a:nth(1)").css("background-color","#003ad3");
+    $("div a:nth(1)").css("background-color","#003ac3");
   });
   $("div a:nth(1)").mouseleave(function(){
     $("div a:nth(1)").css("background-color","#00000000");

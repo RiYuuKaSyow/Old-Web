@@ -12,18 +12,18 @@
 
   //連接mysql
   include("php/linkmysql.php") ;
-
   //登出
   if( isset($_POST['dia-logout-btn'] ) ){
     session_destroy() ;
   }
-  //檢查帳號
   else {
+    //檢查帳號
     include("php/idcheck.php") ;
   }
-
   //註冊
   include("php/signup.php") ;
+
+
 
   //套用樣板
   $smarty->display( "index.html" ) ;
