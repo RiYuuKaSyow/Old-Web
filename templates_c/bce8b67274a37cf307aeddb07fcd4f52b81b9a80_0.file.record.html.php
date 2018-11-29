@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-29 15:11:40
+/* Smarty version 3.1.32, created on 2018-11-29 15:25:53
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfff39caf23c1_48873748',
+  'unifunc' => 'content_5bfff6f1c5fa64_17726757',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1543500698,
+      1 => 1543501553,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfff39caf23c1_48873748 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bfff6f1c5fa64_17726757 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -66,42 +66,8 @@ function content_5bfff39caf23c1_48873748 (Smarty_Internal_Template $_smarty_tpl)
 
 </head>
 <body>
-
-  <!---網頁navbar--->
-  <div class="webnav container col-sm-12 col-xs-12">
-    <nav class="nav-tabs navbar-sticky-top" style="height:63px">
-      <div class="row " style="height:60px" >
-        <div class="col-sm-10 col-xs-10">
-          <div class="col-sm-3 col-xs-3">
-            <div class="anima">
-            </div>
-            <a href="../index.php" class="h2" style="text-decoration:none;" >
-              智慧監視器
-            </a>
-            <div class="anima2">
-            </div>
-          </div>
-        </div>
-        <!--下拉選單-->
-        <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
-          <button class="btn bg-white dropdown-toggle" id="dropbtn" type="button" style="height:60px;">
-            <?php echo $_smarty_tpl->tpl_vars['user']->value->user;?>
-
-          </button>
-          <div class="dropdown dropdown-menu-right " id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
-            <a class="dropdown-item " href="../index.php">首頁</a>
-            <a class="dropdown-item " href="../web/stream.php">即時影像</a>
-            <a class="dropdown-item " href="../web/user.php">設定</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item "  id="outbtn">登出</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
   <!--紀錄頁標題-->
   <div class="text-center">
-    <div class="">
       <div class="text-center col-xs-12 col-sm-12 ">
         <a href="#" id="rec_a" class=" h2" style=" text-decoration:none;">紀錄</a>
         <a class="h2" id="xd"> / </a>
@@ -240,7 +206,6 @@ for ($__section_hour_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_h
           <button type="submit" class="btn btn-outline-primary" name="button">搜尋</button>
         </form>
       </div>
-    </div>
   </div>
 
   <!--紀錄頁內容表格-->

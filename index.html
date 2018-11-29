@@ -41,13 +41,26 @@
         $("#mail_exist").fadeIn(300).delay(800).fadeOut(300);
       };
 
+      $("#index").click(function(){
+        $("#body_frame").attr( "src" , "web/index.php" );
+      });
+      $("#record").click(function(){
+        $("#body_frame").attr( "src" , "web/record.php" );
+      });
+      $("#stream").click(function(){
+        $("#body_frame").attr( "src" , "web/stream.php" );
+      });
+      $("#user").click(function(){
+        $("#body_frame").attr( "src" , "web/user.php" );
+      });
+
     });
 
   </script>
 
 </head>
 
-<body>
+<body style="overflow:hidden; margin-top: 80px;">
   <!---網頁navbar-->
   <div class="webnav container col-sm-12 col-xs-12" style="height:80px">
     <nav class="nav-tabs navbar-sticky-top" style="height:63px">
@@ -79,9 +92,10 @@
             {$user->user}
           </button>
           <div class="dropdown dropdown-menu-right" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
-            <a class="dropdown-item text" href="web/record.php">紀錄</a>
-            <a class="dropdown-item text" href="web/stream.php">即時影像</a>
-            <a class="dropdown-item text" href="web/user.php">設定</a>
+            <a id="index" class="dropdown-item text" href="#">首頁</a>
+            <a id="record" class="dropdown-item text" href="#">紀錄</a>
+            <a id="stream" class="dropdown-item text" href="#">即時影像</a>
+            <a id="user" class="dropdown-item text" href="#">設定</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text"  id="outbtn">登出</a>
           </div>
@@ -90,16 +104,13 @@
       </nav>
     </div>
 
-  <!--首頁標題--->
-  <div class="text-center col-xs-12 col-sm-12 h1 " >
-    首  頁
-  </div>
+
 
   <!--首頁內容--->
   <div class="container col-sm-12 col-xs-12">
     <div class="row">
         <div class="col-sm-12 col-xs-12 text-center" >
-          <iframe src="web/record.php" frameborder="0" width="1200px" height="410px">
+          <iframe id="body_frame" src="web/index.php" frameborder="0" width="1200px" height="500px">
           </iframe>
         </div>
     </div>

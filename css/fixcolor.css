@@ -25,9 +25,6 @@ body{
 .bg_blue1{
   background-color: #5897CF ;
 }
-body{
-  margin-top: 80px;
-}
 .webnav{
   position: fixed;
   top:0px;
