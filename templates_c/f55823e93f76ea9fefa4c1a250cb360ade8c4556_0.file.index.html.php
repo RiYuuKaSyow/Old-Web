@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-29 15:39:21
+/* Smarty version 3.1.32, created on 2018-11-30 03:26:13
   from 'E:\xampp\htdocs\html\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfffa19785502_76660856',
+  'unifunc' => 'content_5c009fc5538797_64920982',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f55823e93f76ea9fefa4c1a250cb360ade8c4556' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\index.html',
-      1 => 1543502342,
+      1 => 1543544772,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfffa19785502_76660856 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c009fc5538797_64920982 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +58,7 @@ function content_5bfffa19785502_76660856 (Smarty_Internal_Template $_smarty_tpl)
   <div class="text-center col-xs-12 col-sm-12 h1 " >
     首  頁
   </div>
+  <img src="../i/img1.jpg" alt=""><img src="../i/img1.jpg" alt=""><img src="../i/img1.jpg" alt="">
 </body>
 </html>
 <?php }

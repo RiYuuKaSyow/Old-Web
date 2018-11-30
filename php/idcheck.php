@@ -1,6 +1,6 @@
 <?php
 
-  $fuser = $fpwd = 0 ;
+  $fuser = $fpwd = $idcheck = 0 ;
 
   //接收post
   if( isset( $_POST['user'] ) && isset( $_POST['pwd'] ) ) {

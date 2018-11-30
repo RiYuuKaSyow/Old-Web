@@ -24,7 +24,7 @@ $( function() {
     $("#outbtn").css("background-color","#00000000");
   });
   $("div a:nth(1)").mouseover(function(){
-    $("div a:nth(1)").css("background-color","#003ac3");
+    $("div a:nth(1)").css("background-color","#00a3f3");
   });
   $("div a:nth(1)").mouseleave(function(){
     $("div a:nth(1)").css("background-color","#00000000");
@@ -40,6 +40,12 @@ $( function() {
   });
   $("div a:nth(3)").mouseleave(function(){
     $("div a:nth(3)").css("background-color","#00000000");
+  });
+  $("div a:nth(4)").mouseover(function(){
+    $("div a:nth(4)").css("background-color","#f300c3");
+  });
+  $("div a:nth(4)").mouseleave(function(){
+    $("div a:nth(4)").css("background-color","#00000000");
   });
   //登出
   $("#outbtn").click(function(){
