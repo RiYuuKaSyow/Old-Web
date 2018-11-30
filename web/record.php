@@ -1,54 +1,30 @@
   <?php
       //設定
-      require("../php/set.php");
-
-      $flags = 0 ;
-      $flagm = 0 ;
+      require( "../php/set.php" ) ;
+      require( "../php/function.php" ) ;
 
       for ($j=0; $j < 60; $j++) {
         $number[$j] = $j;
       }
       $smarty->assign( "number" ,$number );
-      try {
-        //連接mysql
-        include("../php/linkmysql.php");
-        if( !$link ){
-          throw new \Exception("Error Processing Request", 1);
-        }
 
-      } catch ( Exception $e) {
-        $smarty->display('../html/linkerror.html');
-      }
-
-      //確認登入
-      include("../php/idcheck.php");
       try {
-        if( $idcheck ){
+        //確認登入
+        list( $user , $user_check ) = id_check() ;
+        if( $user_check ){
           //取資料
-          include("../php/data.php") ;
-
-          //成功取道資料
-          if( $flags ){
-            $smarty ->assign( "sqldb" ,$all_list ) ;
-
-          }
-          if( $flagm ){
-            $smarty ->assign( "sqlmeb" ,$member_list);
-          }
-
+          list( $all_list , $member_list ) = data_base() ;
+          $smarty ->assign( "sqldb" ,$all_list ) ;
+          $smarty ->assign( "sqlmeb" ,$member_list);
           //套用樣板
           $smarty->display('../html/record.html');
-
-        //  $sql1->close() ;
-        //  $sql4->close() ;
-          $mysqli->close() ;
         }
         else {
           throw new Exception("Error Processing Request", 1);
         }
       } catch ( Exception $e) {
         $smarty->display("../html/nologin.html") ;
-        header( 'refresh:0.1;  url="../index.php"' ) ;
+        header( 'refresh:0.1;  url="index.php"' ) ;
       }
 
 

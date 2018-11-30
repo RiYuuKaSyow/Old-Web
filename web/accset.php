@@ -1,6 +1,7 @@
 <?php
+
+  require("../lib/libs/Smarty.class.php");
   require("../php/set.php") ;
-  include("../php/linkmysql.php") ;
   include("../php/idcheck.php") ;
 
   $smarty->assign( "opwd" , '0' ) ;

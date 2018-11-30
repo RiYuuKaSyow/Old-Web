@@ -23,21 +23,24 @@
 
     $( function() {
       //檢查登入 顯示按鈕
-      if ({$idcheck}){
+      if ({$user_check} == 1 ){
         $("#login_btn").hide();
         $("#signup_btn").hide();
         $("#dropbtn").show();
-      };
-      if( {$usercheck}  ){
+      }
+      else if( {$user_check} == 2 ){
         $("#user_wrong").fadeIn(300).delay(800).fadeOut(300);
-      };
-      if( {$pwdcheck} ){
+      }
+      else if( {$user_check} == 3 ){
         $("#pwd_wrong").fadeIn(300).delay(800).fadeOut(300);
       };
-      if( {$usersmae} ){
+      if( {$sign_up} == 1){
+        $("#sign_success").fadeIn(300).delay(500).fadeOut(300);
+      }
+      else if( {$sign_up} == 2){
         $("#user_exist").fadeIn(300).delay(800).fadeOut(300);
-      };
-      if ( {$mailsame} ) {
+      }
+      else if ( {$sign_up} == 3) {
         $("#mail_exist").fadeIn(300).delay(800).fadeOut(300);
       };
 
@@ -53,7 +56,6 @@
       $("#user").click(function(){
         $("#body_frame").attr( "src" , "web/user.php" );
       });
-
     });
 
   </script>
@@ -186,6 +188,15 @@
       <div class="modal-content">
         <div class="modal-body text-center">
           帳號錯誤
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sign_success" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          註冊成功
         </div>
       </div>
     </div>

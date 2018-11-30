@@ -11,7 +11,7 @@
     }
   } catch (\Exception $e) {
     $smarty->display('../html/nologin.html') ;
-    header( 'refresh:0.1;  url="../index.php"' ) ;
+    header( 'refresh:0.1;  url="index.php"' ) ;
   }
 
 ?>
