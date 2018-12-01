@@ -28,7 +28,7 @@ body{
 .webnav{
   position: fixed;
   top:0px;
-  background-color: white;
+  background-color: #ffffff;
   z-index: 100;
 }
 ul li{
