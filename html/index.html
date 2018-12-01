@@ -17,12 +17,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>智慧監視器</title>
+
+  <script type="text/javascript">
+    $(function(){
+      $(document).keydown(function(event){
+        switch (event.keyCode) {
+          //上
+          case 38:
+            $("#img1").animate( { top : '-=20px' } ).delay(100) ;
+            break ;
+          //下
+          case 40:
+            $("#img1").animate( { top : '+=20px' } ).delay(100) ;
+            break ;
+          //左
+          case 39:
+            $("#img1").animate( { left : '+=20px' } ).delay(100) ;;
+            break ;
+          //右
+          case 37:
+            $("#img1").animate( { left : '-=20px' } ).delay(100) ;
+            break ;
+          default:
+            break;
+        }
+      });
+    });
+  </script>
+
 </head>
 <body>
   <!--首頁標題--->
   <div class="text-center col-xs-12 col-sm-12 h1 " >
     首  頁
   </div>
-  <img src="../i/img1.jpg" alt=""><img src="../i/img1.jpg" alt=""><img src="../i/img1.jpg" alt="">
+  <img id="img1" src="../i/img1.jpg" alt="" style=" position: relative; ">
 </body>
 </html>

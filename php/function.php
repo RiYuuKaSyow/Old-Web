@@ -133,9 +133,18 @@
 
   //資料
   function data_base(){
-
+    $serch = 0 ;
     include("linkmysql.php") ;
-    $sqls = "select year,month,day,hour,min,sec,member,img from video1" ;
+    if( isset($_POST['sermeb'] ) ){
+      $sermeb = $_POST['sermeb'] ;
+      if( $sermeb != -1 ){
+        $sqls = "select year,month,day,hour,min,sec,member,img from video1 where member = '$sermeb' " ;
+      }else{
+        $sqls = "select year,month,day,hour,min,sec,member,img from video1" ;
+      }
+    }else{
+      $sqls = "select year,month,day,hour,min,sec,member,img from video1" ;
+    }
     $sqlm = "select member from member" ;
     //刪除語法
     $sqldel = "delete from video1 where id =";
@@ -153,14 +162,17 @@
             if( $_POST['serh1']=== '-1' or ( ((int)$list->day < (int)$_POST['serday2'] and (int)$list->day >= (int)$_POST['serh1']) or ((int)$list->month === (int)$_POST['serday2'] and (int)$list->day <= (int)$_POST['serh2']) ) ){
               $all_list[$i] = $list ;
               $i++ ;
+              $serch = 1 ;
             }
           }
         }
       }
+
       //如果尚未查詢
       else{
         $all_list[$i] = $list ;
         $i++ ;
+        $serch = 1 ;
       }
 
       //刪除
@@ -175,7 +187,10 @@
         $member_list[$i] = $list2->member ;
         $i++ ;
       }
-      return array( $all_list , $member_list ) ;
+      if( $serch == 0 ){
+        $all_list = "" ;
+      }
+      return array( $serch , $all_list , $member_list ) ;
   }
 
 ?>

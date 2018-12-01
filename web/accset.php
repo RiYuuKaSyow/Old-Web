@@ -1,8 +1,9 @@
 <?php
 
-  require("../lib/libs/Smarty.class.php");
-  require("../php/set.php") ;
-  include("../php/idcheck.php") ;
+  require( "../php/set.php" ) ;
+  require( "../php/function.php" ) ;
+
+  list( $user , $user_check ) = id_check() ;
 
   $smarty->assign( "opwd" , '0' ) ;
 
@@ -23,7 +24,7 @@
     $mail = $_POST['new_mail'] ;
     $mysqliuser->query( "update data set mail = '$mail' where user = '$user' " ) ;
   }
-
+  $smarty->assign( "user" , $user ) ;
   $smarty->display("../html/accset.html") ;
 
 

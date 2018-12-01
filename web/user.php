@@ -1,9 +1,9 @@
 <?php
-  require("../php/set.php");
-  include("../php/linkmysql.php");
-  include("../php/idcheck.php");
+  require( "../php/set.php" ) ;
+  require( "../php/function.php" ) ;
   try {
-    if ( $idcheck ) {
+    list( $user , $user_check ) = id_check() ;
+    if ( $user_check ) {
       $smarty->display('../html/user.html') ;
     }
     else {

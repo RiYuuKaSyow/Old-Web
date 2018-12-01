@@ -13,8 +13,10 @@
         list( $user , $user_check ) = id_check() ;
         if( $user_check ){
           //取資料
-          list( $all_list , $member_list ) = data_base() ;
-          $smarty ->assign( "sqldb" ,$all_list ) ;
+          list( $serch , $all_list , $member_list ) = data_base() ;
+          if( $serch == 1 ){
+            $smarty ->assign( "sqldb" ,$all_list ) ;
+          }
           $smarty ->assign( "sqlmeb" ,$member_list);
           //套用樣板
           $smarty->display('../html/record.html');
