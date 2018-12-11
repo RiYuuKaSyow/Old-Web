@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-29 15:35:32
+/* Smarty version 3.1.32, created on 2018-12-04 08:08:19
   from 'E:\xampp\htdocs\html\user.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfff93469ebd3_63828424',
+  'unifunc' => 'content_5c0627e3ea8390_43953700',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89bd1bd32699c7b89b02b2c4449936e413f70833' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\user.html',
-      1 => 1543502101,
+      1 => 1543675610,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfff93469ebd3_63828424 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0627e3ea8390_43953700 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -30,7 +30,7 @@ function content_5bfff93469ebd3_63828424 (Smarty_Internal_Template $_smarty_tpl)
   <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="../css/user.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/fixcolor.css">
+  <link rel="stylesheet" href="../css/web.css">
   <link rel="stylesheet" href="../css/test.css">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>

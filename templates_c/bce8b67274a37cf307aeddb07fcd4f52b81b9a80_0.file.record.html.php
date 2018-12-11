@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-29 15:25:53
+/* Smarty version 3.1.32, created on 2018-12-04 08:12:21
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bfff6f1c5fa64_17726757',
+  'unifunc' => 'content_5c0628d523a451_51933826',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1543501553,
+      1 => 1543907539,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bfff6f1c5fa64_17726757 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0628d523a451_51933826 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -29,7 +29,7 @@ function content_5bfff6f1c5fa64_17726757 (Smarty_Internal_Template $_smarty_tpl)
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/fixcolor.css">
+  <link rel="stylesheet" href="../css/web.css">
   <link rel="stylesheet" href="../css/test.css">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
@@ -256,7 +256,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_sqlid']->value['rownum'] = $__section_s
                       圖片
                     </button>
                   -->
-                    <img src="../i/img2.jpg" width="200px" height="100px">
+                    <img src="../img/img2.jpg" width="200px" height="100px">
                   </td>
                 </tr>
                   <!--開啟dialog顯示圖片-->

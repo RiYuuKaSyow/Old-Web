@@ -138,12 +138,12 @@
     if( isset($_POST['sermeb'] ) ){
       $sermeb = $_POST['sermeb'] ;
       if( $sermeb != -1 ){
-        $sqls = "select year,month,day,hour,min,sec,member,img from video1 where member = '$sermeb' " ;
+        $sqls = "select * from video1 where member = '$sermeb' " ;
       }else{
-        $sqls = "select year,month,day,hour,min,sec,member,img from video1" ;
+        $sqls = "select * from video1" ;
       }
     }else{
-      $sqls = "select year,month,day,hour,min,sec,member,img from video1" ;
+      $sqls = "select * from video1" ;
     }
     $sqlm = "select member from member" ;
     //刪除語法

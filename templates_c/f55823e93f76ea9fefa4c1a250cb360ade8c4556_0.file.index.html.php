@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-12-01 15:44:05
+/* Smarty version 3.1.32, created on 2018-12-04 07:59:16
   from 'E:\xampp\htdocs\html\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5c029e358abd96_10107079',
+  'unifunc' => 'content_5c0625c4026ec9_36684501',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f55823e93f76ea9fefa4c1a250cb360ade8c4556' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\index.html',
-      1 => 1543675443,
+      1 => 1543906752,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c029e358abd96_10107079 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0625c4026ec9_36684501 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +28,7 @@ function content_5c029e358abd96_10107079 (Smarty_Internal_Template $_smarty_tpl)
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/fixcolor.css">
+  <link rel="stylesheet" href="../css/web.css">
   <link rel="stylesheet" href="css/test.css">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
@@ -69,10 +69,10 @@ function content_5c029e358abd96_10107079 (Smarty_Internal_Template $_smarty_tpl)
         <div id="carousel" class=" carousel slide " data-ride="carousel" data-interval="3500">
           <div class="carousel-inner text-center">
             <div class="carousel-item active">
-              <img class="w-50" src="../i/img1.jpg" alt="" style="width:1000px;" >
+              <img class="w-50" src="../img/img1.jpg" alt="" style="width:1000px;" >
             </div>
             <div class="carousel-item">
-              <img class="w-50" src="../i/img2.jpg" alt="">
+              <img class="w-50" src="../img/img2.jpg" alt="">
             </div>
           </div>
           <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev" >

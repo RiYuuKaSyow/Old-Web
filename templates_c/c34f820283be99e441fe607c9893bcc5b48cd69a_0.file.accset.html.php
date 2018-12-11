@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-10-27 17:10:13
+/* Smarty version 3.1.32, created on 2018-12-04 08:10:00
   from 'E:\xampp\htdocs\html\accset.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5bd47fd5335462_98211313',
+  'unifunc' => 'content_5c0628483a9147_86308684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c34f820283be99e441fe607c9893bcc5b48cd69a' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\accset.html',
-      1 => 1540653011,
+      1 => 1543907397,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd47fd5335462_98211313 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0628483a9147_86308684 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -28,7 +28,7 @@ function content_5bd47fd5335462_98211313 (Smarty_Internal_Template $_smarty_tpl)
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/fixcolor.css">
+  <link rel="stylesheet" href="../css/web.css">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
@@ -101,7 +101,7 @@ function content_5bd47fd5335462_98211313 (Smarty_Internal_Template $_smarty_tpl)
 </td>
             </tr>
             <tr style="height:200px;">
-              <td ><input class="btn btn-info" type="button" id="ch_pwd_btn" value="更改密碼"></td>
+              <td ><input class="btn btn-outline-info" type="button" id="ch_pwd_btn" value="更改密碼"></td>
               <td>
                 <div id="ch_pwd" class=""   style="display:none; border: 3px solid #FFAE7F;border-collapse: collapse;">
                   <form class="" action="../web/accset.php" method="post">
@@ -123,7 +123,7 @@ function content_5bd47fd5335462_98211313 (Smarty_Internal_Template $_smarty_tpl)
               <td style="width:150px;">信箱:</td>
               <td style="width:250px;"><?php echo $_smarty_tpl->tpl_vars['user']->value->mail;?>
 </td>
-              <td > <input class="btn btn-primary" type="button" id="ch_mail_btn" value="更改信箱"> </td>
+              <td > <input class="btn btn-outline-primary" type="button" id="ch_mail_btn" value="更改信箱"> </td>
               <td style="width:250px;">
                 <div id="ch_mail" class="" style="display:none; border: 3px solid #AE7FFF;border-collapse: collapse;" >
                   <form class="" action="../web/accset.php" method="post">
