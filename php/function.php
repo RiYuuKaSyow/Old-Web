@@ -26,6 +26,7 @@
             $_SESSION['pwd'] =  $ppwd ;
             $user_check = 1 ;
             $user0 = $user ;
+            $_POST['user'] = $_POST['pwd'] = 0 ;
             break ;
           }
           else{

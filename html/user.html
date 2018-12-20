@@ -13,13 +13,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" ></script>
-  <script src="../js/navbar.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>智慧監視器</title>
   <script type="text/javascript">
     //檢查登入 顯示按鈕
     $(function(){
+      $("#navbar").load("../php/navbar.php") ;
       //帳號設定頁面
       $("#setting").click(function(){
         $("#setdiv").attr( "src" , "../web/accset.php");
@@ -52,6 +52,10 @@
   </script>
 </head>
 <body>
+
+  <!--頁面導覽-->
+  <div id="navbar" >
+  </div>
 
   <div class="container">
     <div class="row">

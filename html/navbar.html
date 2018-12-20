@@ -13,15 +13,15 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" ></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-  <script src="js/navbar.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>智慧監視器</title>
-
+  <title>智慧監視系統</title>
   <script type="text/javascript">
-
     $( function() {
+      $("#index").mouseover(function(){
+        $("#index").css( "color" , "black" ) ;
+      });
       //檢查登入 顯示按鈕
       if ({$user_check} == 1 ){
         $("#login_btn").hide();
@@ -43,36 +43,75 @@
       else if ( {$sign_up} == 3) {
         $("#mail_exist").fadeIn(300).delay(800).fadeOut(300);
       };
-
-      $("#index").click(function(){
-        $("#body_frame").attr( "src" , "web/index.php" );
+      //下拉選單
+      $("#dropbtn").click(function(){
+        $("#dropmenu").toggle();
       });
-      $("#record").click(function(){
-        $("#body_frame").attr( "src" , "web/record.php" );
+      $("#dropbtn").mouseover(function(){
+        $("#dropmenu").show();
       });
-      $("#stream").click(function(){
-        $("#body_frame").attr( "src" , "web/stream.php" );
+      $("#dropbtn").mouseleave(function(){
+        $("#dropmenu").hide();
       });
-      $("#user").click(function(){
-        $("#body_frame").attr( "src" , "web/user.php" );
+      $("#dropmenu").mouseover(function(){
+        $("#dropmenu").show();
+      });
+      $("#dropmenu").mouseleave(function(){
+        $("#dropmenu").hide();
+      });
+      $("#outbtn").mouseover(function(){
+        $("#outbtn").css("background-color","red");
+      });
+      $("#outbtn").mouseleave(function(){
+        $("#outbtn").css("background-color","#00000000");
+      });
+      $("div a:nth(1)").mouseover(function(){
+        $("div a:nth(1)").css("background-color","#00a3f3");
+      });
+      $("div a:nth(1)").mouseleave(function(){
+        $("div a:nth(1)").css("background-color","#00000000");
+      });
+      $("div a:nth(2)").mouseover(function(){
+        $("div a:nth(2)").css("background-color","#a5ffb0");
+      });
+      $("div a:nth(2)").mouseleave(function(){
+        $("div a:nth(2)").css("background-color","#00000000");
+      });
+      $("div a:nth(3)").mouseover(function(){
+        $("div a:nth(3)").css("background-color","orange");
+      });
+      $("div a:nth(3)").mouseleave(function(){
+        $("div a:nth(3)").css("background-color","#00000000");
+      });
+      $("div a:nth(4)").mouseover(function(){
+        $("div a:nth(4)").css("background-color","#f300c3");
+      });
+      $("div a:nth(4)").mouseleave(function(){
+        $("div a:nth(4)").css("background-color","#00000000");
+      });
+      //登出
+      $("#outbtn").click(function(){
+        $("#logout").show();
+      });
+      //取消
+      $("#outcan").click(function(){
+        $("#logout").hide();
       });
     });
-
   </script>
-
 </head>
 
-<body style="overflow:hidden; margin-top: 80px;">
+<body>
   <!---網頁navbar-->
-  <div class="webnav container col-sm-12 col-xs-12" style="height:80px">
-    <nav class="nav-tabs navbar-sticky-top" style="height:63px">
+  <div class="webnav container col-sm-12 col-xs-12" style="height:10%">
+    <nav class="nav-tabs navbar-sticky-top">
       <div class="row" style="height:60px" >
         <div class="col-sm-10 col-xs-10">
           <div class="col-sm-3 col-xs-3">
             <div class="anima">
             </div>
-            <a href="index.php" class="h2" style="text-decoration:none;" >
-              智慧監視器
+            <a id="index" href="../web/index.php" class="h3" style="text-decoration:none;" >
+              智慧監視系統
             </a>
             <div class="anima2">
             </div>
@@ -80,24 +119,24 @@
         </div>
         <!---登入 登出 紀錄 按鈕-->
         <div id="login_btn" class="col-sm-1 col-xs-1 "  >
-          <button  type="submit" class="bg-white btn" data-toggle="modal" data-target="#login" style="height:60px;" >
+          <button  type="submit" class="bg-white btn" data-toggle="modal" data-target="#login"  >
             登入
           </button>
         </div>
         <div id="signup_btn" class=" justify-content-end col-sm-1 col-xs-1 " >
-          <button  type="submit" class="btn bg-white rounded mx-auto d-block" data-toggle="modal" data-target="#signup" style="height:60px;" >
+          <button  type="submit" class="btn bg-white rounded mx-auto d-block" data-toggle="modal" data-target="#signup"  >
             註冊
           </button>
         </div>
-        <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " style="height:60px;">
-          <button class="bg-white btn btn dropdown-toggle" id="dropbtn" type="button" style="height:60px; display:none;">
+        <div class="dropdown align-item-end col-sm-1.5 col-xs-1.5 " >
+          <button class="bg-white btn btn dropdown-toggle" id="dropbtn" type="button" style=" display:none;">
             {$user->user}
           </button>
           <div class="dropdown dropdown-menu-right" id="dropmenu" aria-labelledby="dropbtn" style="z-index:999; display:none;">
-            <a id="index" class="dropdown-item text" href="#">首頁</a>
-            <a id="record" class="dropdown-item text" href="#">紀錄</a>
-            <a id="stream" class="dropdown-item text" href="#">即時影像</a>
-            <a id="user" class="dropdown-item text" href="#">設定</a>
+            <a class="dropdown-item text" href="../web/index.php">首頁</a>
+            <a class="dropdown-item text" href="../web/record.php">紀錄</a>
+            <a class="dropdown-item text" href="../web/stream.php">即時影像</a>
+            <a class="dropdown-item text" href="../web/user.php">設定</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text"  id="outbtn">登出</a>
           </div>
@@ -108,15 +147,16 @@
 
 
 
-  <!--首頁內容--->
+  <!--首頁內容
   <div class="container col-sm-12 col-xs-12">
     <div class="row">
         <div class="col-sm-12 col-xs-12 text-center" >
-          <iframe id="body_frame" src="web/index.php" frameborder="0" width="1200px" height="800px">
+          <iframe id="body_frame" src="web/index.php" frameborder="0" width="1200px" height="400px">
           </iframe>
         </div>
     </div>
   </div>
+  --->
 
   <!--按鈕觸發dialog 來登入-->
   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -130,7 +170,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form class="" action="index.php" method="post">
+        <form class="" action="../web/index.php" method="post">
           <div class="modal-body text-center">
             <div class="form-group col-md-12">
               <input id="user" type="text" class="form-control" name="user" placeholder="帳號">
@@ -241,7 +281,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form class="" action="index.php" method="post">
+        <form class="" action="../web/index.php" method="post">
           <div class="modal-body text-center">
             <div class="form-group col-md-12">
               <input type="text" class="form-control" maxlength="12" name="sign_user" required="required" placeholder="帳號(限長12)">

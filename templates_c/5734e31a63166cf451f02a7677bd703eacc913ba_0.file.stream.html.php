@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-11-30 03:23:39
+/* Smarty version 3.1.32, created on 2018-12-20 12:28:49
   from 'E:\xampp\htdocs\html\stream.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5c009f2bb95f70_45279027',
+  'unifunc' => 'content_5c1b7cf14e9456_02613554',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5734e31a63166cf451f02a7677bd703eacc913ba' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\stream.html',
-      1 => 1543502126,
+      1 => 1545303452,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c009f2bb95f70_45279027 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c1b7cf14e9456_02613554 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -28,7 +28,7 @@ function content_5c009f2bb95f70_45279027 (Smarty_Internal_Template $_smarty_tpl)
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/fixcolor.css">
+  <link rel="stylesheet" href="../css/web.css">
   <link rel="stylesheet" href="../css/test.css">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"><?php echo '</script'; ?>
@@ -56,6 +56,9 @@ function content_5c009f2bb95f70_45279027 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 
+  <!--頁面導覽-->
+  <div id="navbar" >
+  </div>
   <!--網頁內容div-->
   <div class="text-center">
     <!--標題-->
@@ -107,7 +110,7 @@ function content_5c009f2bb95f70_45279027 (Smarty_Internal_Template $_smarty_tpl)
     </div>
   </div>
 
-    <!---溫度感測--->
+    <!---溫度感測-->
     <div id="MyWidgetWrap" style="width: 400px; height: 300px;">
       <link href="http://120.101.8.8:8080/qiot/freeboard/css/jquery.jqplot.min.css" rel="stylesheet" />
       <link href="http://120.101.8.8:8080/qiot/freeboard/css/freeboard.css" rel="stylesheet" />
@@ -147,7 +150,7 @@ function content_5c009f2bb95f70_45279027 (Smarty_Internal_Template $_smarty_tpl)
  type="text/javascript" src="http://120.101.8.8:8080/qiot/freeboard/plugins/customize/embed.load.js"><?php echo '</script'; ?>
 >
   </div>
-    <!---濕度感測--->
+    <!---濕度感測
     <div id="MyWidgetWrap" style="width: 400px; height: 300px;">
       <link href="http://120.101.8.8:8080/qiot/freeboard/css/jquery.jqplot.min.css" rel="stylesheet" />
       <link href="http://120.101.8.8:8080/qiot/freeboard/css/freeboard.css" rel="stylesheet" />

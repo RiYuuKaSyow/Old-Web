@@ -3,6 +3,8 @@ html{
 }
 body{
   min-height: 100% ;
+  overflow:hidden;
+  margin-top: 5%;
 }
 .bg_black{
   background-color: #000000 ;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-12-04 08:08:19
+/* Smarty version 3.1.32, created on 2018-12-20 12:37:13
   from 'E:\xampp\htdocs\html\user.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5c0627e3ea8390_43953700',
+  'unifunc' => 'content_5c1b7ee9e1b144_03004085',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89bd1bd32699c7b89b02b2c4449936e413f70833' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\user.html',
-      1 => 1543675610,
+      1 => 1545305805,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c0627e3ea8390_43953700 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c1b7ee9e1b144_03004085 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -44,9 +44,6 @@ function content_5c0627e3ea8390_43953700 (Smarty_Internal_Template $_smarty_tpl)
   <?php echo '<script'; ?>
  src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" ><?php echo '</script'; ?>
 >
-  <?php echo '<script'; ?>
- src="../js/navbar.js"><?php echo '</script'; ?>
->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>智慧監視器</title>
@@ -54,6 +51,7 @@ function content_5c0627e3ea8390_43953700 (Smarty_Internal_Template $_smarty_tpl)
  type="text/javascript">
     //檢查登入 顯示按鈕
     $(function(){
+      $("#navbar").load("../php/navbar.php") ;
       //帳號設定頁面
       $("#setting").click(function(){
         $("#setdiv").attr( "src" , "../web/accset.php");
@@ -87,6 +85,10 @@ function content_5c0627e3ea8390_43953700 (Smarty_Internal_Template $_smarty_tpl)
 >
 </head>
 <body>
+
+  <!--頁面導覽-->
+  <div id="navbar" >
+  </div>
 
   <div class="container">
     <div class="row">

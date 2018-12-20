@@ -19,11 +19,11 @@
   animation-iteration-count: infinite;
 }
 @keyframes round1 {
-  0%{left:-10px;top:52px;}
-  25%{left:200px;top:52px;}
-  50%{left:200px;top:5px;}
+  0%{left:-10px;top:30%}
+  25%{left:5%;top:30%}
+  50%{left:5%;top:5px;}
   75%{left:-10px;top:5px;}
-  100%{left:-10px;top:52px;}
+  100%{left:-10px;top:30%;}
 }
 @keyframes round2 {
   0%{left:200px;top:-50px;}

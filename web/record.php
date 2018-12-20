@@ -7,6 +7,7 @@
         $number[$j] = $j;
       }
       $smarty->assign( "number" ,$number );
+      $smarty ->assign( "page" ,2);
 
       try {
         //確認登入
