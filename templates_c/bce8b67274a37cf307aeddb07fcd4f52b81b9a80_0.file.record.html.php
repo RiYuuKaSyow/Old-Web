@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-12-20 12:37:11
+/* Smarty version 3.1.32, created on 2018-12-20 13:18:58
   from 'E:\xampp\htdocs\html\record.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5c1b7ee7032d38_25666859',
+  'unifunc' => 'content_5c1b88b2b12823_13229488',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bce8b67274a37cf307aeddb07fcd4f52b81b9a80' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\record.html',
-      1 => 1545305810,
+      1 => 1545306200,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c1b7ee7032d38_25666859 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c1b88b2b12823_13229488 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -46,7 +46,7 @@ function content_5c1b7ee7032d38_25666859 (Smarty_Internal_Template $_smarty_tpl)
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>智慧監視器</title>
+  <title>智慧監視系統</title>
 
   <?php echo '<script'; ?>
  type="text/javascript">

@@ -19,16 +19,16 @@
   animation-iteration-count: infinite;
 }
 @keyframes round1 {
-  0%{left:-10px;top:30%}
-  25%{left:5%;top:30%}
-  50%{left:5%;top:5px;}
-  75%{left:-10px;top:5px;}
-  100%{left:-10px;top:30%;}
+  0%{left:-10px;top:50px}
+  25%{left:250px;top:50px}
+  50%{left:250px;top:0px;}
+  75%{left:-10px;top:0px;}
+  100%{left:-10px;top:50px;}
 }
 @keyframes round2 {
-  0%{left:200px;top:-50px;}
+  0%{left:250px;top:-50px;}
   25%{left:-10px;top:-50px;}
   50%{left:-10px;top:0px;}
-  75%{left:200px;top:0px;}
-  100%{left:200px;top:-50px;}
+  75%{left:250px;top:0px;}
+  100%{left:250px;top:-50px;}
 }
