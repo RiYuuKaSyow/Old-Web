@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-12-25 06:44:42
+/* Smarty version 3.1.32, created on 2018-12-26 19:33:02
   from 'E:\xampp\htdocs\html\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5c21c3ca456273_67541948',
+  'unifunc' => 'content_5c23c95ec14080_00587492',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f55823e93f76ea9fefa4c1a250cb360ade8c4556' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\index.html',
-      1 => 1545716681,
+      1 => 1545849182,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c21c3ca456273_67541948 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c23c95ec14080_00587492 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -67,8 +67,10 @@ function content_5c21c3ca456273_67541948 (Smarty_Internal_Template $_smarty_tpl)
 
   </div>
   <!--首頁內容--->
-  <div class=" container ">
-
+  <div class=" container " style=" height:600px;">
+    <div class="h2">
+      團隊照片
+    </div>
       <!--圖片--->
       <div class="row">
         <div class="col">
@@ -105,11 +107,18 @@ function content_5c21c3ca456273_67541948 (Smarty_Internal_Template $_smarty_tpl)
   </div>
 
   <div class="dropdown-divider">  </div>
-  <div class="container">
+  <div class="container" style="height:400px; font-size:200%">
     <div class="row">
-      <iframe src="../txt/a.txt" width="1250px" height="200px" frameborder="0" ></iframe>
+      <div class="h2">
+        開發理念
+      </div>
+      <iframe src="../txt/a.txt" width="1250px" height="200px" frameborder="0"></iframe>
+    </div>
+    <div class="" src="../txt/a.txt" >
+
     </div>
   </div>
+  <div class="dropdown-divider">  </div>
 
 
 </body>

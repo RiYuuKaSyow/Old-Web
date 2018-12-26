@@ -7,7 +7,7 @@
     $user0 = " " ;
     $user_check = 0 ;
     //接收post
-    if( isset( $_POST['user'] ) && isset( $_POST['pwd'] ) ) {
+    if( isset( $_POST['user'] ) && isset( $_POST['pwd'] ) && !(isset( $_SESSION['user_check'] ) ) ) {
       $puser = $_POST['user'];
       $ppwd = $_POST['pwd'] ;
       $md5pwd = md5($ppwd) ;
@@ -24,9 +24,9 @@
             //連線成功 建立session
             $_SESSION['acc'] =  $user->user ;
             $_SESSION['pwd'] =  $ppwd ;
+            $_SESSION['user_check'] = 1 ;
             $user_check = 1 ;
             $user0 = $user ;
-            $_POST['user'] = $_POST['pwd'] = 0 ;
             break ;
           }
           else{
@@ -139,14 +139,14 @@
     if( isset($_POST['sermeb'] ) ){
       $sermeb = $_POST['sermeb'] ;
       if( $sermeb != -1 ){
-        $sqls = "select * from video1 where member = '$sermeb' " ;
+        $sqls = "select * from video1 where member = '$sermeb' order by id desc " ;
       }else{
-        $sqls = "select * from video1" ;
+        $sqls = "select * from video1 order by id desc" ;
       }
     }else{
-      $sqls = "select * from video1" ;
+      $sqls = "select * from video1 order by id desc" ;
     }
-    $sqlm = "select member from member" ;
+    $sqlm = "select member from member order by member asc" ;
     //刪除語法
     $sqldel = "delete from video1 where id =";
     $mysqli->query('set names utf8') ;

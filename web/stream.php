@@ -6,11 +6,6 @@
   try {
     list($user , $check) = id_check();
     if ( $check ) {
-      //設定頻道
-      $smarty->assign("channel1" , "https://www.youtube.com/embed/PRlAY486hVg") ;
-      $smarty->assign("channel2" , "https://www.youtube.com/embed/86jRi9goYLQ") ;
-      $smarty->assign("channel3" , "https://www.youtube.com/embed/fXudTNYXnw0") ;
-
       //套用樣板
       $smarty->display("../html/stream.html") ;
     }

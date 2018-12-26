@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-12-20 12:35:58
+/* Smarty version 3.1.32, created on 2018-12-26 20:08:06
   from 'E:\xampp\htdocs\html\navbar.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5c1b7e9e3a57d0_23872364',
+  'unifunc' => 'content_5c23d1964d2615_69701015',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b8c3d5a39cd44da6db6743b1e5613f31c12148fe' => 
     array (
       0 => 'E:\\xampp\\htdocs\\html\\navbar.html',
-      1 => 1545305756,
+      1 => 1545851283,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c1b7e9e3a57d0_23872364 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c23d1964d2615_69701015 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <!----->
 <html lang="zh">
@@ -140,6 +140,24 @@ function content_5c1b7e9e3a57d0_23872364 (Smarty_Internal_Template $_smarty_tpl)
     });
   <?php echo '</script'; ?>
 >
+
+  <?php echo '<script'; ?>
+ type="text/javascript">
+    $(function(){
+
+      $("#sign_up_pwd2").blur(function(){
+        if( $("#sign_up_pwd1").val() != $("#sign_up_pwd2").val() ){
+          $("#pwd2_wrong").show();
+        }
+        else{
+          $("#pwd2_wrong").hide();
+        };
+      });
+
+    });
+  <?php echo '</script'; ?>
+>
+
 </head>
 
 <body>
@@ -187,19 +205,6 @@ function content_5c1b7e9e3a57d0_23872364 (Smarty_Internal_Template $_smarty_tpl)
       </nav>
     </div>
 
-
-
-  <!--首頁內容
-  <div class="container col-sm-12 col-xs-12">
-    <div class="row">
-        <div class="col-sm-12 col-xs-12 text-center" >
-          <iframe id="body_frame" src="web/index.php" frameborder="0" width="1200px" height="400px">
-          </iframe>
-        </div>
-    </div>
-  </div>
-  --->
-
   <!--按鈕觸發dialog 來登入-->
   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document" >
@@ -225,17 +230,17 @@ function content_5c1b7e9e3a57d0_23872364 (Smarty_Internal_Template $_smarty_tpl)
           </div>
           <div class="modal-footer">
             <div class="col-sm-9 ">
-              <button id="dia-login-btn" type="submit" class="text-light btn btn-block rounded mx-auto d-block bg_blue1">
+              <button name="dia-login-btn" id="dia-login-btn" type="submit" class="text-light btn btn-block rounded mx-auto d-block bg_blue1">
                 登入
               </button>
             </div>
+        </form>
             <div class="col-sm-3">
               <button type="button" class="btn btn-danger btn-block" data-dismiss="modal" aria-label="Close">
                 取消
               </button>
             </div>
           </div>
-        </form>
       </div>
     </div>
   </div>
@@ -252,7 +257,7 @@ function content_5c1b7e9e3a57d0_23872364 (Smarty_Internal_Template $_smarty_tpl)
             確定要登出嗎?
         </div>
         <div class="modal-footer">
-          <form class="" action="../index.php" method="post">
+          <form class="" action="../web/index.php" method="post">
             <button type="submit" name="dia-logout-btn">
               確定
             </button>
@@ -330,11 +335,14 @@ function content_5c1b7e9e3a57d0_23872364 (Smarty_Internal_Template $_smarty_tpl)
               <span class="help-block"></span>
             </div>
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" maxlength="12" name="sign_pwd" required="required" placeholder="密碼(限長12)">
+              <input id ="sign_up_pwd1" type="password" class="form-control" maxlength="12" name="sign_pwd" required="required" placeholder="密碼(限長12)">
               <span class="help-block"></span>
             </div>
             <div class="form-group col-md-12">
-              <input type="password" class="form-control" required="required" placeholder="再次輸入密碼">
+              <input id ="sign_up_pwd2" type="password" class="form-control" required="required" placeholder="再次輸入密碼">
+              <div id="pwd2_wrong" class="" style="display:none;">
+                輸入錯誤
+              </div>
               <span class="help-block"></span>
             </div>
             <div class="form-group col-md-12">

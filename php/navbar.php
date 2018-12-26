@@ -5,13 +5,12 @@
   if( isset($_POST['dia-logout-btn'] ) ){
     session_destroy() ;
   }
-  else {
+  else{
     //檢查帳號
     list( $user , $user_check ) = id_check() ;
     $smarty->assign( "user" , $user ) ;
     $smarty->assign( "user_check" , $user_check ) ;
   }
-
   //註冊
   $sign_up = 0 ;
   $sign_up = sign_up() ;

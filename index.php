@@ -15,22 +15,33 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <title>智慧監視系統</title>
 </head>
-<body style=" background-color:black " >
+<body style="max-width: 1100px ;background-color:black " >
   <script type="text/javascript">
     $(function(){
       $("#div1").fadeIn(2000) ;
-      $("#div2").delay(1000).fadeIn(2000) ;
+      $("#div2").fadeIn(2000) ;
+      $("#div3").delay(1000).fadeIn(2000) ;
     });
   </script>
-  <div id="div1" style=" position:relative; top:300px; left:400px; font-size:400%; color:white ; display: none;" >
-    2019/1/1
-    即將到來
-  </div>
-  <div id="div2" class="h6" style="position:relative; top:500px; left:1000px; color:red ; display: none;" >
-    coming soon
-  </div>
+  <?php
+    $rep_date = new DateTime("now" , new DateTimeZone('Asia/Taipei') ) ;
+    $now_time = new DateTime("now" , new DateTimeZone('Asia/Taipei') ) ;
+    $rep_date->setDate(2019,01,02) ;
+    $rep_date->setTime(14,00,00) ;
+    $t = $rep_date->diff($now_time) ;
+    header( 'refresh:3.5;  url="web/index.php"' ) ;
+    echo '<div id="div1" style=" position:relative; top:200px; left:400px; font-size:400% ; color:white ; display: none;" >
+            2019/1/2
+            即將到來
+          </div>
+          <div id="div2" style=" position:relative; top:230px; left:350px; font-size:400% ; color:white ; display: none;" >
+            剩餘'. $t->format('%d') .'天' . $t->format('%h') .'時' . $t->format('%i') .'分' . $t->format('%s') .'秒' .'
+          </div>
+          <div id="div3" class="h4" style="position:relative; top:400px; left:1000px; color:red ; width:150px ; display: none;" >
+             coming soon
+          </div>' ;
+
+
+?>
 </body>
 </html>
-<?php
-  header( 'refresh:3.5;  url="web/index.php"' ) ;
-?>
